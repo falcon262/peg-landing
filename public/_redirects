@@ -1,0 +1,10 @@
+https://www.justpegit.online/*  https://justpegit.online/:splat  301
+/faq.html        /faq        301
+/terms.html      /terms      301
+/privacy.html    /privacy    301
+/refunds.html    /refunds    301
+/feedback.html   /feedback   301
+/about.html      /about      301
+/contact.html    /contact    301
+/peg.html        /           301
+/*               /index.html 200

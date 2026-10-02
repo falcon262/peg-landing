@@ -1,0 +1,15 @@
+{
+  "title": "PEG",
+  "description": "Laundry pickup in Ghana. Book a nearby shop, pay with Mobile Money or card through Paystack after the shop weighs the load. Operated by Falcon Solutions.",
+  "language": "en",
+  "robots": {
+    "index": true
+  },
+  "icons": {
+    "icon": "/assets/client/4bcf8.svg"
+  },
+  "accessibility": {
+    "addBypassLinks": true,
+    "ignoreReducedMotion": false
+  }
+}
