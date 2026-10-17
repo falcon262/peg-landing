@@ -6,7 +6,7 @@
     "index": true
   },
   "icons": {
-    "icon": "/assets/client/4bcf8.svg"
+    "icon": "/favicon.svg"
   },
   "accessibility": {
     "addBypassLinks": true,

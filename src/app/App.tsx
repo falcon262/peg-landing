@@ -34,17 +34,16 @@ function Icon({
   file,
   partner,
   className = "",
+  gold = false,
 }: {
   file: string
   partner: boolean
   className?: string
+  gold?: boolean
 }) {
+  const src = `/assets/${partner ? "partner" : "client"}/${gold ? `${file}-gold` : file}.svg`
   return (
-    <img
-      src={`/assets/${partner ? "partner" : "client"}/${file}.svg`}
-      alt=""
-      className={`size-6 shrink-0 ${className}`}
-    />
+    <img src={src} alt="" className={`size-6 shrink-0 ${className}`} />
   )
 }
 
@@ -357,7 +356,7 @@ export default function App({ partner, onPartnerChange }: LandingProps) {
           <div className={`${shell} grid gap-8 py-7 md:grid-cols-3`}>
             {features.map(([title, text, icon]) => (
               <div key={title} className="flex items-start gap-4">
-                <Icon file={icon} partner={partner} className="mt-1" />
+                <Icon file={icon} partner={partner} gold className="mt-1" />
                 <div>
                   <h2 className="font-display text-sm font-bold">{title}</h2>
                   <p className="mt-2 text-[11px] leading-relaxed text-white/75">
