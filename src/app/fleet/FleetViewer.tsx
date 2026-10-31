@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react";
 import {
   LIVERIES,
   OPTION_LABELS,
@@ -8,13 +8,11 @@ import {
   type PartId,
   type TrikeOptions,
   type ViewId,
-} from "./trikeData"
-import { createTrikeScene, type TrikeController } from "./trikeScene"
+} from "./trikeData";
+import { createTrikeScene, type TrikeController } from "./trikeScene";
 
-const reduceMotion = () =>
-  window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false
-const coarsePointer = () =>
-  window.matchMedia?.("(pointer: coarse)").matches ?? false
+const reduceMotion = () => window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+const coarsePointer = () => window.matchMedia?.("(pointer: coarse)").matches ?? false;
 
 const defaultOptions = (): TrikeOptions => ({
   spin: !reduceMotion(),
@@ -23,100 +21,100 @@ const defaultOptions = (): TrikeOptions => ({
   cut: false,
   lights: false,
   canopy: true,
-})
+});
 
-const label = "text-[10px] font-bold uppercase tracking-[0.14em] text-[#5a5a5a]"
+const label = "text-[10px] font-bold uppercase tracking-[0.14em] text-[#5a5a5a]";
 
 export default function FleetViewer() {
-  const hostRef = useRef<HTMLDivElement>(null)
-  const stageRef = useRef<HTMLDivElement>(null)
-  const ctrl = useRef<TrikeController | null>(null)
-  const [failed, setFailed] = useState(false)
-  const [view, setView] = useState<ViewId | null>("hero")
-  const [part, setPart] = useState<PartId | null>(null)
-  const [livery, setLivery] = useState<LiveryId>("onyx")
-  const [options, setOptions] = useState<TrikeOptions>(defaultOptions)
-  const [touch] = useState(coarsePointer)
+  const hostRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const ctrl = useRef<TrikeController | null>(null);
+  const [failed, setFailed] = useState(false);
+  const [view, setView] = useState<ViewId | null>("hero");
+  const [part, setPart] = useState<PartId | null>(null);
+  const [livery, setLivery] = useState<LiveryId>("onyx");
+  const [options, setOptions] = useState<TrikeOptions>(defaultOptions);
+  const [touch] = useState(coarsePointer);
 
   useEffect(() => {
-    const host = hostRef.current
-    if (!host) return
+    const host = hostRef.current;
+    if (!host) return;
     try {
       ctrl.current = createTrikeScene(host, options, {
         onInteract: () => {
-          setView(null)
-          setOptions((o) => (o.spin ? { ...o, spin: false } : o))
+          setView(null);
+          setOptions((o) => (o.spin ? { ...o, spin: false } : o));
         },
-      })
+      });
     } catch {
-      setFailed(true)
+      setFailed(true);
     }
     return () => {
-      ctrl.current?.dispose()
-      ctrl.current = null
-    }
+      ctrl.current?.dispose();
+      ctrl.current = null;
+    };
     // The scene is built once; later option and livery changes are pushed by the effects below.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
-  useEffect(() => ctrl.current?.setOptions(options), [options])
-  useEffect(() => ctrl.current?.setLivery(livery), [livery])
+  useEffect(() => ctrl.current?.setOptions(options), [options]);
+  useEffect(() => ctrl.current?.setLivery(livery), [livery]);
 
-  const activePart = PARTS.find((p) => p.id === part) ?? null
+  const activePart = PARTS.find((p) => p.id === part) ?? null;
 
   // The controls sit below the model. If a control changes something that is scrolled out of view, bring the model back.
   const reveal = () => {
-    const el = stageRef.current
-    if (!el) return
-    const r = el.getBoundingClientRect()
+    const el = stageRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
     if (r.top < 60 || r.bottom > window.innerHeight + 40) {
       el.scrollIntoView({
         behavior: reduceMotion() ? "auto" : "smooth",
         block: "start",
-      })
+      });
     }
-  }
+  };
 
   const chooseView = (id: ViewId) => {
-    reveal()
-    setView(id)
-    setPart(null)
-    setOptions((o) => ({ ...o, spin: false }))
-    ctrl.current?.setView(id)
-  }
+    reveal();
+    setView(id);
+    setPart(null);
+    setOptions((o) => ({ ...o, spin: false }));
+    ctrl.current?.setView(id);
+  };
 
   const inspect = (id: PartId) => {
-    const p = PARTS.find((x) => x.id === id)
-    if (!p) return
-    reveal()
-    setPart(id)
-    setView(null)
+    const p = PARTS.find((x) => x.id === id);
+    if (!p) return;
+    reveal();
+    setPart(id);
+    setView(null);
     setOptions((o) => ({
       ...o,
       spin: false,
       doors: p.doors ? true : o.doors,
       cut: p.cutaway ? true : o.cut,
       canopy: p.canopy ? true : o.canopy,
-    }))
-    ctrl.current?.inspect(id)
-  }
+    }));
+    ctrl.current?.inspect(id);
+  };
 
   const reset = () => {
-    setPart(null)
-    setView("hero")
-    setLivery("onyx")
-    setOptions(defaultOptions())
-    ctrl.current?.setView("hero")
-  }
+    setPart(null);
+    setView("hero");
+    setLivery("onyx");
+    setOptions(defaultOptions());
+    ctrl.current?.setView("hero");
+  };
 
   const toggle = (key: keyof TrikeOptions) => {
-    reveal()
-    setOptions((o) => ({ ...o, [key]: !o[key] }))
-  }
+    reveal();
+    setOptions((o) => ({ ...o, [key]: !o[key] }));
+  };
   const chooseLivery = (id: LiveryId) => {
-    reveal()
-    setLivery(id)
-  }
+    reveal();
+    setLivery(id);
+  };
 
   return (
     <div className="flex flex-col gap-5">
@@ -125,8 +123,7 @@ export default function FleetViewer() {
         ref={stageRef}
         className="sticky top-[76px] z-10 h-[min(440px,52svh)] overflow-hidden rounded-2xl border border-black/5 shadow-[0_12px_30px_#13131312] sm:h-[min(540px,55svh)] lg:relative lg:top-auto lg:h-[620px] lg:shadow-none"
         style={{
-          background:
-            "radial-gradient(120% 90% at 45% 40%, #ffffff 0%, #e6e6e1 100%)",
+          background: "radial-gradient(120% 90% at 45% 40%, #ffffff 0%, #e6e6e1 100%)",
         }}
       >
         <div
@@ -143,9 +140,7 @@ export default function FleetViewer() {
         ) : (
           <>
             <p className="pointer-events-none absolute left-4 top-4 rounded-full bg-white/85 px-3 py-1.5 text-[11px] font-medium text-[#5a5a5a] shadow-sm backdrop-blur">
-              {touch
-                ? "Drag to rotate. Pinch to zoom."
-                : "Drag to rotate. Ctrl + scroll to zoom."}
+              {touch ? "Drag to rotate. Pinch to zoom." : "Drag to rotate. Ctrl + scroll to zoom."}
             </p>
             <div className="absolute right-4 top-4 flex flex-col overflow-hidden rounded-xl border border-black/5 bg-white/90 shadow-sm backdrop-blur">
               <button
@@ -185,9 +180,7 @@ export default function FleetViewer() {
             <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#7a5c15]">
               {activePart.kicker}
             </p>
-            <h3 className="mt-1 text-lg font-extrabold tracking-tight">
-              {activePart.title}
-            </h3>
+            <h3 className="mt-1 text-lg font-extrabold tracking-tight">{activePart.title}</h3>
             <p
               className="mt-1 text-[13px] leading-relaxed text-[#5a5a5a]"
               style={{ fontFamily: "Inter, sans-serif" }}
@@ -320,5 +313,5 @@ export default function FleetViewer() {
         </div>
       </aside>
     </div>
-  )
+  );
 }

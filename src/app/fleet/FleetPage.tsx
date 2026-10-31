@@ -1,8 +1,8 @@
-import { lazy, Suspense } from "react"
-import { Link, usePageMeta } from "../../lib/routing"
+import { lazy, Suspense } from "react";
+import { Link, usePageMeta } from "../../lib/routing";
 
 // three.js is only downloaded when someone opens this page.
-const FleetViewer = lazy(() => import("./FleetViewer"))
+const FleetViewer = lazy(() => import("./FleetViewer"));
 
 const notes = [
   {
@@ -17,13 +17,13 @@ const notes = [
     title: "A rail for pressed clothes",
     body: "Shirts, kaftans and suits hang from a rail fixed to the roof of the box. Bagged and folded orders ride on the floor beside them.",
   },
-]
+];
 
 export default function FleetPage() {
   usePageMeta(
     "PEG cargo trike | PEG",
     "Explore the PEG cargo trike in 3D: a concept laundry pickup vehicle built on the SL150ZH-200L, with a closed box and a garment rail.",
-  )
+  );
 
   return (
     <main>
@@ -38,17 +38,13 @@ export default function FleetPage() {
           className="mt-5 max-w-2xl text-[16px] leading-[1.7] text-[#5a5a5a]"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
-          A concept for laundry pickup and delivery in Ghana, in PEG colours.
-          Turn it around, switch the livery, open the doors and look inside.
-          Today, pickup is arranged with a delivery partner. This is how a PEG
-          trike could look.
+          A concept for laundry pickup and delivery in Ghana, in PEG colours. Turn it around, switch
+          the livery, open the doors and look inside. Today, pickup is arranged with a delivery
+          partner. This is how a PEG trike could look.
         </p>
       </section>
 
-      <section
-        className="mx-auto max-w-6xl px-5 md:px-8"
-        aria-label="3D trike viewer"
-      >
+      <section className="mx-auto max-w-6xl px-5 md:px-8" aria-label="3D trike viewer">
         <Suspense
           fallback={
             <div className="grid h-[min(440px,52svh)] place-items-center rounded-2xl border border-black/5 bg-[#eeeeea] text-sm text-[#5a5a5a] sm:h-[min(540px,55svh)] lg:h-[620px]">
@@ -64,9 +60,7 @@ export default function FleetPage() {
         <div className="grid gap-8 md:grid-cols-3 md:gap-10">
           {notes.map((n) => (
             <div key={n.title} className="border-t-2 border-[#f0c749] pt-5">
-              <h2 className="text-lg font-extrabold tracking-tight">
-                {n.title}
-              </h2>
+              <h2 className="text-lg font-extrabold tracking-tight">{n.title}</h2>
               <p
                 className="mt-2 text-[14px] leading-[1.7] text-[#5a5a5a]"
                 style={{ fontFamily: "Inter, sans-serif" }}
@@ -94,5 +88,5 @@ export default function FleetPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }

@@ -17,6 +17,8 @@ export default defineConfig(({ mode }) => {
     build: {
       sourcemap: emitSourcemaps ? 'inline' : false,
       minify: !emitSourcemaps,
+      // The /fleet page lazy-loads three.js as its own ~585 kB chunk. Keep the warning for anything bigger.
+      chunkSizeWarningLimit: 650,
     },
     plugins: [
 react(),
