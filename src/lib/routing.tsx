@@ -8,6 +8,7 @@ const PATH_ALIASES: Record<string, string> = {
   "/feedback.html": "/feedback",
   "/about.html": "/about",
   "/contact.html": "/contact",
+  "/fleet.html": "/fleet",
   "/peg.html": "/",
   "/peg": "/",
   "/index.html": "/",
