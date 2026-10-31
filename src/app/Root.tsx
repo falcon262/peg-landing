@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Landing from "./App";
+import FleetPage from "./fleet/FleetPage";
 import { LegalShell } from "./LegalShell";
 import {
   AboutPage,
@@ -26,6 +27,8 @@ export default function Root() {
       ? AboutPage
       : path === "/contact"
         ? ContactPage
+        : path === "/fleet"
+          ? FleetPage
         : path === "/faq"
           ? FaqPage
           : path === "/feedback"

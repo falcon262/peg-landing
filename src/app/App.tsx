@@ -1018,6 +1018,9 @@ export default function App({ partner, onPartnerChange }: LandingProps) {
                 <a href="#app" className="block text-white/60">
                   {partner ? "The partner app" : "Laundry services"}
                 </a>
+                <Link href="/fleet" className="block text-white/60">
+                  The PEG trike
+                </Link>
               </div>
               <div className="space-y-3 text-xs">
                 <p className="font-semibold">For you</p>

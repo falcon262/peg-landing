@@ -30,6 +30,9 @@ export function LegalShell({ partner, onPartnerChange, children }: LegalShellPro
             <Link href="/#why" className="transition-colors hover:text-[#131313]">
               How it works
             </Link>
+            <Link href="/fleet" className="transition-colors hover:text-[#131313]">
+              The trike
+            </Link>
             <Link href="/faq" className="transition-colors hover:text-[#131313]">
               FAQ
             </Link>
@@ -58,6 +61,9 @@ export function LegalShell({ partner, onPartnerChange, children }: LegalShellPro
             <div className="flex flex-col gap-3 text-[14px] font-medium">
               <Link href="/#why" onClick={close}>
                 How it works
+              </Link>
+              <Link href="/fleet" onClick={close}>
+                The trike
               </Link>
               <Link href="/faq" onClick={close}>
                 FAQ
@@ -106,6 +112,9 @@ export function LegalShell({ partner, onPartnerChange, children }: LegalShellPro
               </Link>
               <Link href="/#join" className="hover:text-white">
                 Become a partner
+              </Link>
+              <Link href="/fleet" className="hover:text-white">
+                The PEG trike
               </Link>
               <Link href="/faq" className="hover:text-white">
                 FAQ

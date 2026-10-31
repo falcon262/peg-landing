@@ -6,5 +6,6 @@ https://www.justpegit.online/*  https://justpegit.online/:splat  301
 /feedback.html   /feedback   301
 /about.html      /about      301
 /contact.html    /contact    301
+/fleet.html      /fleet      301
 /peg.html        /           301
 /*               /index.html 200
