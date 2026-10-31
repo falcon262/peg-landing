@@ -1,14 +1,14 @@
-export type Vec3 = [number, number, number]
+export type Vec3 = [number, number, number];
 
-export type LiveryId = "onyx" | "navy" | "green"
+export type LiveryId = "onyx" | "navy" | "green";
 export type Livery = {
-  id: LiveryId
-  name: string
-  note: string
-  box: string
-  deep: string
-  body: string
-}
+  id: LiveryId;
+  name: string;
+  note: string;
+  box: string;
+  deep: string;
+  body: string;
+};
 
 export const LIVERIES: Livery[] = [
   {
@@ -35,20 +35,20 @@ export const LIVERIES: Livery[] = [
     deep: "#063f30",
     body: "#0b5c46",
   },
-]
+];
 
-export type PartId = "box" | "doors" | "rail" | "cockpit" | "engine" | "fork" | "axle"
+export type PartId = "box" | "doors" | "rail" | "cockpit" | "engine" | "fork" | "axle";
 export type Part = {
-  id: PartId
-  title: string
-  kicker: string
-  body: string
-  cam: Vec3
-  target: Vec3
-  doors?: boolean
-  cutaway?: boolean
-  canopy?: boolean
-}
+  id: PartId;
+  title: string;
+  kicker: string;
+  body: string;
+  cam: Vec3;
+  target: Vec3;
+  doors?: boolean;
+  cutaway?: boolean;
+  canopy?: boolean;
+};
 
 export const PARTS: Part[] = [
   {
@@ -111,9 +111,9 @@ export const PARTS: Part[] = [
     cam: [-1.0, 0.55, 2.7],
     target: [-0.95, 0.35, 0],
   },
-]
+];
 
-export type ViewId = "hero" | "side" | "rear" | "front" | "top" | "low"
+export type ViewId = "hero" | "side" | "rear" | "front" | "top" | "low";
 export const VIEWS: { id: ViewId; label: string; cam: Vec3; target: Vec3 }[] = [
   {
     id: "hero",
@@ -146,16 +146,16 @@ export const VIEWS: { id: ViewId; label: string; cam: Vec3; target: Vec3 }[] = [
     cam: [-3.4, 0.45, -3.8],
     target: [-0.3, 0.85, 0],
   },
-]
+];
 
 export type TrikeOptions = {
-  spin: boolean
-  drive: boolean
-  doors: boolean
-  cut: boolean
-  lights: boolean
-  canopy: boolean
-}
+  spin: boolean;
+  drive: boolean;
+  doors: boolean;
+  cut: boolean;
+  lights: boolean;
+  canopy: boolean;
+};
 
 export const OPTION_LABELS: { key: keyof TrikeOptions; label: string }[] = [
   { key: "spin", label: "Turntable" },
@@ -164,4 +164,4 @@ export const OPTION_LABELS: { key: keyof TrikeOptions; label: string }[] = [
   { key: "cut", label: "See inside" },
   { key: "lights", label: "Lights on" },
   { key: "canopy", label: "Rider canopy" },
-]
+];
