@@ -3,10 +3,22 @@
 @import './styles/theme.css';
 
 @layer base {
-  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-  body { font-family: 'Inter', sans-serif; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; -webkit-text-size-adjust: 100%; }
+  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background: #f8f8f8; color: #131313; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { text-wrap: balance; }
   button, a, summary { -webkit-tap-highlight-color: transparent; }
   button { cursor: pointer; }
-  button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid #b58b25; outline-offset: 5px; }
-  ::selection { background: #f0c749; color: #131313; }
+  :focus-visible { outline: 2px solid #131313; outline-offset: 3px; border-radius: 6px; }
+  ::selection { background: #f2cc44; color: #131313; }
+}
+
+/* the route card: the rider travels the road and settles at the door (DESIGN.md, motion) */
+@keyframes peg-ride { 0%, 8% { offset-distance: 0%; } 78%, 100% { offset-distance: 100%; } }
+@keyframes peg-draw { 0%, 8% { stroke-dashoffset: 1; } 78%, 100% { stroke-dashoffset: 0; } }
+.peg-rider { offset-path: path('M 26 150 L 26 104 Q 26 92 38 92 L 120 92 Q 132 92 132 80 L 132 40 Q 132 28 144 28 L 214 28'); offset-rotate: 0deg; animation: peg-ride 6s cubic-bezier(.45,.05,.3,1) infinite; }
+.peg-trail { stroke-dasharray: 1; animation: peg-draw 6s cubic-bezier(.45,.05,.3,1) infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .peg-rider { animation: none; offset-distance: 100%; }
+  .peg-trail { animation: none; stroke-dashoffset: 0; }
+  *, *::before, *::after { transition: none !important; }
 }

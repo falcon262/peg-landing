@@ -23,7 +23,7 @@ const defaultOptions = (): TrikeOptions => ({
   canopy: true,
 });
 
-const label = "text-[10px] font-bold uppercase tracking-[0.14em] text-[#5a5a5a]";
+const label = "text-[13px] font-semibold text-[#5a5a5a]";
 
 export default function FleetViewer() {
   const hostRef = useRef<HTMLDivElement>(null);
@@ -177,7 +177,7 @@ export default function FleetViewer() {
             >
               ×
             </button>
-            <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#7a5c15]">
+            <p className="text-[13px] font-semibold text-[#7a5c15]">
               {activePart.kicker}
             </p>
             <h3 className="mt-1 text-lg font-extrabold tracking-tight">{activePart.title}</h3>
