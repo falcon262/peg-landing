@@ -160,6 +160,10 @@ export default function App({ partner, onPartnerChange }: LandingProps) {
           "At intake. Weigh the load, confirm it in the app, and the customer sees the fee before they pay through Paystack.",
         ],
         [
+          "How do pickups reach my shop?",
+          "Tap Request PEG rider on an accepted pickup order. PEG offers the trip to the nearest free riders, and if nobody takes it you can ask again or PEG assigns one. Confirm in the app when the clothes arrive.",
+        ],
+        [
           "Do shops collect customer payments?",
           "No. The customer pays Falcon Solutions through Paystack after you confirm the weight. Falcon settles shops separately. PEG does not keep a shop wallet.",
         ],
@@ -179,7 +183,7 @@ export default function App({ partner, onPartnerChange }: LandingProps) {
         ],
         [
           "How does pickup work?",
-          "You book a shop in PEG. A rider collects the clothes. Falcon does not run its own fleet. Pickup is arranged with a partner. Yango is the stopgap while that is set up.",
+          "You book a shop in PEG. A PEG rider collects the clothes and brings them back. The order shows your rider and where they are.",
         ],
       ]
 

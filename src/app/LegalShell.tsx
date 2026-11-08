@@ -16,7 +16,7 @@ export function LegalShell({ partner, onPartnerChange, children }: LegalShellPro
   const footerMark = partner ? "ba8b3" : "2aa0f";
 
   return (
-    <div className="min-h-screen bg-[#f8f8f8] text-[#131313]" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+    <div className="min-h-screen bg-[#f8f8f8] text-[#131313]" style={{ fontFamily: "'Mona Sans', sans-serif" }}>
       <header className="sticky top-0 z-50 border-b border-black/5 bg-[#f8f8f8]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
           <Link href="/" className="flex items-center gap-2.5" onClick={close}>
