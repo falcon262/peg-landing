@@ -21,3 +21,10 @@ logs/
 # beside it.
 /.plugins/
 /.opencode-skills/
+
+# Taste skill working files (checker crops, Chrome profiles, shots); keep the plan, waivers and deal histories
+.taste-skill/*
+!.taste-skill/plan.md
+!.taste-skill/waivers.json
+!.taste-skill/history.json
+!.taste-skill/layout-history.json
