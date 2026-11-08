@@ -1,72 +1,23 @@
 import type { ReactNode } from "react";
 import { CONTACT_EMAIL, CONTACT_LOCATION, CONTACT_PHONE, CUSTOMER_APP, OPERATOR_NAME, PARTNER_APP } from "../config";
 import { Link, usePageMeta } from "../lib/routing";
-import { LegalArticle } from "./LegalShell";
+import { Faq, LegalArticle, PageHeader, WaitlistBand, wrap } from "./site/ui";
 
 function P({ children }: { children: ReactNode }) {
-  return <p className="mb-4 text-[15px] leading-7 text-[#3a3a3a]">{children}</p>;
+  return <p className="mb-5 text-[17px] leading-7 text-[#3a3a3a]">{children}</p>;
 }
 
 function H({ children }: { children: ReactNode }) {
-  return <h2 className="mb-3 mt-10 text-xl font-extrabold tracking-tight">{children}</h2>;
+  return <h2 className="mb-3 mt-12 text-[24px] font-extrabold leading-8 tracking-[-0.02em]">{children}</h2>;
 }
 
 function Ul({ items }: { items: string[] }) {
   return (
-    <ul className="mb-4 list-disc space-y-2 pl-5 text-[15px] leading-7 text-[#3a3a3a]">
+    <ul className="mb-5 list-disc space-y-2 pl-5 text-[17px] leading-7 text-[#3a3a3a]">
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}
     </ul>
-  );
-}
-
-export function AboutPage() {
-  usePageMeta(
-    `About ${CUSTOMER_APP}`,
-    `${CUSTOMER_APP} is a Ghana laundry marketplace operated by ${OPERATOR_NAME}. Book a nearby shop, pay after the load is weighed.`,
-  );
-
-  return (
-    <LegalArticle eyebrow="About" title={`${CUSTOMER_APP} is laundry pickup for Ghana`}>
-      <P>
-        {CUSTOMER_APP} is the customer app. {PARTNER_APP} is the shop app. Both are operated by {OPERATOR_NAME} in{" "}
-        {CONTACT_LOCATION}.
-      </P>
-      <P>
-        You book a nearby laundry shop, a rider collects the clothes, the shop weighs the load, then you pay the fee
-        through Paystack with Mobile Money or card. Shops do not collect that customer payment themselves.
-      </P>
-      <H>Who we are</H>
-      <P>
-        {OPERATOR_NAME} builds and operates {CUSTOMER_APP}. We are the merchant of record for customer checkout. Shops
-        on the marketplace are independent businesses. We settle them separately from the Paystack charge you make in
-        the app.
-      </P>
-      <H>What we do not do</H>
-      <Ul
-        items={[
-          "We do not hold customer or shop wallets in the apps.",
-          "We do not move money between users inside PEG.",
-          "Saved payment methods in the app are labels only. Cards and Mobile Money stay with Paystack.",
-        ]}
-      />
-      <H>Pickup and delivery</H>
-      <P>
-        PEG riders collect your clothes, take them to the shop and bring them back. Falcon staff approve each rider
-        before they can take trips. Your order shows your rider and where they are, and you give the rider a 4-digit
-        code when your clothes come back. Delivery is priced by road distance.
-      </P>
-      <H>How shops join</H>
-      <P>
-        A shop applies in {PARTNER_APP}, uploads a Ghana Card, and sits in review until Falcon staff approve or reject
-        the application. A shop cannot take {CUSTOMER_APP} orders until that approval is in place.
-      </P>
-      <H>Contact</H>
-      <P>
-        {CONTACT_EMAIL} · {CONTACT_PHONE} · {CONTACT_LOCATION}
-      </P>
-    </LegalArticle>
   );
 }
 
@@ -80,19 +31,19 @@ export function ContactPage() {
         applications, refunds, and anything else on this site.
       </P>
       <div className="mb-8 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-2xl border border-black/8 bg-white p-5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#5a5a5a]">Email</p>
-          <a href={`mailto:${CONTACT_EMAIL}`} className="mt-2 block text-[15px] font-semibold text-[#0b5c46]">
+        <div className="rounded-3xl bg-white p-6 ring-1 ring-rule">
+          <p className="text-[14px] font-semibold text-grey">Email</p>
+          <a href={`mailto:${CONTACT_EMAIL}`} className="mt-2 block text-[17px] font-bold">
             {CONTACT_EMAIL}
           </a>
         </div>
-        <div className="rounded-2xl border border-black/8 bg-white p-5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#5a5a5a]">Phone</p>
-          <p className="mt-2 text-[15px] font-semibold">{CONTACT_PHONE}</p>
+        <div className="rounded-3xl bg-white p-6 ring-1 ring-rule">
+          <p className="text-[14px] font-semibold text-grey">Phone</p>
+          <p className="mt-2 text-[17px] font-bold">{CONTACT_PHONE}</p>
         </div>
-        <div className="rounded-2xl border border-black/8 bg-white p-5 sm:col-span-2">
-          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#5a5a5a]">Location</p>
-          <p className="mt-2 text-[15px] font-semibold">{CONTACT_LOCATION}</p>
+        <div className="rounded-3xl bg-white p-6 ring-1 ring-rule sm:col-span-2">
+          <p className="text-[14px] font-semibold text-grey">Location</p>
+          <p className="mt-2 text-[17px] font-bold">{CONTACT_LOCATION}</p>
         </div>
       </div>
       <P>
@@ -176,23 +127,22 @@ export function FaqPage() {
   ];
 
   return (
-    <LegalArticle eyebrow="FAQ" title="Questions people actually ask">
-      {groups.map((group) => (
-        <section key={group.title} className="mb-4">
-          <H>{group.title}</H>
-          <div className="divide-y divide-black/8 overflow-hidden rounded-2xl border border-black/8 bg-white">
-            {group.items.map((item) => (
-              <details key={item.q} className="group px-5 py-4">
-                <summary className="cursor-pointer list-none text-[15px] font-semibold">
-                  {item.q}
-                </summary>
-                <p className="mt-2 text-[14px] leading-7 text-[#5a5a5a]">{item.a}</p>
-              </details>
-            ))}
-          </div>
-        </section>
-      ))}
-    </LegalArticle>
+    <>
+      <PageHeader pill="FAQ" title="Questions people actually ask" lead="Paying, pickup and delivery, accounts and shops. Anything else goes to the team at Falcon Solutions." />
+      <div className={`${wrap} grid gap-14 py-14 md:py-20`}>
+        {groups.map((group) => (
+          <section key={group.title} className="grid gap-6 lg:grid-cols-12 lg:gap-6" aria-labelledby={`faq-${group.title}`}>
+            <h2 id={`faq-${group.title}`} className="text-[26px] font-extrabold tracking-[-0.02em] lg:col-span-4">
+              {group.title}
+            </h2>
+            <div className="lg:col-span-7 lg:col-start-6">
+              <Faq items={group.items.map((item) => [item.q, item.a] as [string, string])} />
+            </div>
+          </section>
+        ))}
+      </div>
+      <WaitlistBand />
+    </>
   );
 }
 
