@@ -183,7 +183,7 @@ export default function FleetViewer() {
             <h3 className="mt-1 text-lg font-extrabold tracking-tight">{activePart.title}</h3>
             <p
               className="mt-1 text-[13px] leading-relaxed text-[#5a5a5a]"
-              style={{ fontFamily: "'Mona Sans', sans-serif" }}
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               {activePart.body}
             </p>
@@ -193,7 +193,7 @@ export default function FleetViewer() {
 
       <aside
         className="grid gap-x-8 gap-y-7 rounded-2xl border border-black/5 bg-white p-5 sm:grid-cols-2 md:p-6 lg:grid-cols-4"
-        style={{ fontFamily: "'Mona Sans', sans-serif" }}
+        style={{ fontFamily: "Inter, sans-serif" }}
         aria-label="Trike viewer controls"
       >
         <div className="flex flex-col gap-2.5">

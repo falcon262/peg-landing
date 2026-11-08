@@ -25,8 +25,8 @@ const LOGO = {
 };
 const GOLD = "#f0c749";
 const SITE = "justpegit.online";
-const DISPLAY = '"Mona Sans", "Segoe UI", sans-serif';
-const BODY = '"Mona Sans", "Segoe UI", sans-serif';
+const DISPLAY = '"Plus Jakarta Sans", "Segoe UI", sans-serif';
+const BODY = 'Inter, "Segoe UI", sans-serif';
 // Light intensities were tuned with legacy lighting; physical lighting needs a factor of pi.
 const LUX = Math.PI;
 
@@ -1587,9 +1587,9 @@ export function createTrikeScene(
   let disposed = false;
   if (document.fonts?.load) {
     Promise.all([
-      document.fonts.load('800 80px "Mona Sans"'),
-      document.fonts.load('700 40px "Mona Sans"'),
-      document.fonts.load('600 40px "Mona Sans"'),
+      document.fonts.load('800 80px "Plus Jakarta Sans"'),
+      document.fonts.load("700 40px Inter"),
+      document.fonts.load("600 40px Inter"),
     ])
       .then(() => {
         if (!disposed) paintTextures();

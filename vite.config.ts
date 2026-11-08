@@ -5,10 +5,6 @@ import path from 'node:path'
 
 import siteConfiguration from './.figma/make/site.json'
 
-// The home page (index.html) is a static page on the Taste kit in public/assets; the React app
-// (app.html) serves every other route. Keep this list in step with public/_redirects.
-const APP_ROUTES = ['/about', '/contact', '/faq', '/feedback', '/fleet', '/partner', '/privacy', '/refunds', '/terms']
-
 
 // Vite config — https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -23,17 +19,10 @@ export default defineConfig(({ mode }) => {
       minify: !emitSourcemaps,
       // The /fleet page lazy-loads three.js as its own ~585 kB chunk. Keep the warning for anything bigger.
       chunkSizeWarningLimit: 650,
-      rollupOptions: {
-        input: {
-          index: path.resolve(__dirname, 'index.html'),
-          app: path.resolve(__dirname, 'app.html'),
-        },
-      },
     },
     plugins: [
 react(),
       tailwindcss(),
-      appRoutes(),
       figmaSiteConfiguration(siteConfiguration),
       figmaErrorOverlayReplay(),
       figmaReactRefreshBoundaryFallback(),
@@ -89,21 +78,6 @@ type FigmaSiteConfiguration = {
   }
 }
 
-/** In dev, serve the React app's shell for its routes, as public/_redirects does in production. */
-function appRoutes(): Plugin {
-  return {
-    name: 'peg-app-routes',
-    configureServer(server) {
-      server.middlewares.use((req, _res, next) => {
-        const [pathname, query] = (req.url || '/').split('?')
-        const route = pathname.replace(/\.html$/, '').replace(/\/+$/, '')
-        if (APP_ROUTES.includes(route)) req.url = '/app.html' + (query ? `?${query}` : '')
-        next()
-      })
-    },
-  }
-}
-
 /** Applies /.figma/make/site.json to the generated document shell. */
 function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
   function sanitizeHtmlValue(value: string | undefined): string {
@@ -150,8 +124,6 @@ function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
     transformIndexHtml: {
       order: 'pre',
       handler(html) {
-        // the static home writes its own head and skip link
-        if (html.includes('name="page-type"')) return html
         let result = html
         result = replaceHtmlCommentSlot(result, 'figma:lang', language)
         result = replaceHtmlCommentSlot(result, 'figma:title', escapeHtmlText(title))

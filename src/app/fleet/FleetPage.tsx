@@ -36,7 +36,7 @@ export default function FleetPage() {
         </h1>
         <p
           className="mt-5 max-w-2xl text-[16px] leading-[1.7] text-[#5a5a5a]"
-          style={{ fontFamily: "'Mona Sans', sans-serif" }}
+          style={{ fontFamily: "Inter, sans-serif" }}
         >
           A concept for laundry pickup and delivery in Ghana, in PEG colours. Turn it around, switch
           the livery, open the doors and look inside. PEG riders handle pickup and delivery today;
@@ -63,7 +63,7 @@ export default function FleetPage() {
               <h2 className="text-lg font-extrabold tracking-tight">{n.title}</h2>
               <p
                 className="mt-2 text-[14px] leading-[1.7] text-[#5a5a5a]"
-                style={{ fontFamily: "'Mona Sans', sans-serif" }}
+                style={{ fontFamily: "Inter, sans-serif" }}
               >
                 {n.body}
               </p>
