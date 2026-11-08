@@ -4,7 +4,7 @@
 
 @layer base {
   html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-  body { font-family: 'Inter', sans-serif; }
+  body { font-family: 'Mona Sans', sans-serif; }
   button, a, summary { -webkit-tap-highlight-color: transparent; }
   button { cursor: pointer; }
   button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid #b58b25; outline-offset: 5px; }

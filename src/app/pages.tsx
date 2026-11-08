@@ -48,10 +48,15 @@ export function AboutPage() {
         items={[
           "We do not hold customer or shop wallets in the apps.",
           "We do not move money between users inside PEG.",
-          "We do not run our own delivery fleet. Pickup is arranged with a partner. Yango is the stopgap while that partnership is set up.",
           "Saved payment methods in the app are labels only. Cards and Mobile Money stay with Paystack.",
         ]}
       />
+      <H>Pickup and delivery</H>
+      <P>
+        PEG riders collect your clothes, take them to the shop and bring them back. Falcon staff approve each rider
+        before they can take trips. Your order shows your rider and where they are, and you give the rider a 4-digit
+        code when your clothes come back. Delivery is priced by road distance.
+      </P>
       <H>How shops join</H>
       <P>
         A shop applies in {PARTNER_APP}, uploads a Ghana Card, and sits in review until Falcon staff approve or reject
@@ -135,11 +140,15 @@ export function FaqPage() {
       items: [
         {
           q: "How does pickup work?",
-          a: "You book a shop in PEG. A rider collects the clothes and takes them there. Falcon does not run its own fleet. Pickup is arranged with a partner. Yango is the stopgap while that is set up.",
+          a: "You book a shop in PEG. A PEG rider collects your clothes, takes them to the shop and brings them back when they are ready. The order shows your rider and where they are, and you give the rider a 4-digit code when your clothes come back.",
+        },
+        {
+          q: "How much is delivery?",
+          a: "Delivery is priced by the road distance between you and the shop. Pickup and delivery counts as two trips; delivery back only counts as one. Addresses beyond the delivery range cannot book pickup, but you can still drop off at the shop.",
         },
         {
           q: "Can I cancel?",
-          a: "Yes, until the shop has started washing. After that, the work is underway so the order cannot be cancelled from the app.",
+          a: "Yes, until the shop has started washing, but not while a rider is carrying your clothes. Once washing starts, the work is underway so the order cannot be cancelled from the app.",
         },
         {
           q: "What if clothes are damaged or missing?",
@@ -283,8 +292,8 @@ export function TermsPage() {
       <H>2. Who you contract with</H>
       <P>
         {OPERATOR_NAME} operates the apps and is the merchant of record for customer checkout. Laundry work is
-        performed by the shop you book. Delivery is arranged with a partner. Yango is the stopgap. Falcon does not
-        operate its own rider fleet.
+        performed by the shop you book. Pickup and delivery are done by PEG riders, approved by Falcon Solutions and
+        paid per trip. The delivery fee is set by road distance and goes to Falcon Solutions, not to the shop.
       </P>
       <H>3. Accounts</H>
       <P>
@@ -360,7 +369,7 @@ export function PrivacyPage() {
         items={[
           "Paystack, to process Mobile Money and card payments and refunds.",
           "The shop you booked, so they can wash the load. They do not receive your card or MoMo secrets.",
-          "The pickup partner (Yango as stopgap) for collection and return.",
+          "The PEG rider on your order, who sees your pickup address and the order details to collect and return your clothes.",
           "Falcon staff who approve or reject shop KYC.",
         ]}
       />
