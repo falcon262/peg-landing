@@ -1,0 +1,3 @@
+[
+  {"check": "hero-lines", "target": "section.hero h1", "reason": "The h1 is final: 'Laundry pickup and delivery in Accra' is 36 characters and sets on three lines at 1440 (checked in the 1440 shot); only the 48-character fill the check uses runs to four."}
+]

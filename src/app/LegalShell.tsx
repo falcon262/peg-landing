@@ -27,7 +27,7 @@ export function LegalShell({ partner, onPartnerChange, children }: LegalShellPro
             />
           </Link>
           <nav className="hidden items-center gap-8 text-[13px] font-medium text-[#5a5a5a] md:flex">
-            <Link href="/#why" className="transition-colors hover:text-[#131313]">
+            <Link href="/#how" className="transition-colors hover:text-[#131313]">
               How it works
             </Link>
             <Link href="/fleet" className="transition-colors hover:text-[#131313]">
@@ -36,7 +36,7 @@ export function LegalShell({ partner, onPartnerChange, children }: LegalShellPro
             <Link href="/faq" className="transition-colors hover:text-[#131313]">
               FAQ
             </Link>
-            <Link href="/#join" className="transition-colors hover:text-[#131313]">
+            <Link href="/partner" className="transition-colors hover:text-[#131313]">
               {partner ? "Apply" : "Join as a shop"}
             </Link>
             <button
@@ -59,7 +59,7 @@ export function LegalShell({ partner, onPartnerChange, children }: LegalShellPro
         {menuOpen && (
           <div className="border-t border-black/5 px-5 py-4 md:hidden">
             <div className="flex flex-col gap-3 text-[14px] font-medium">
-              <Link href="/#why" onClick={close}>
+              <Link href="/#how" onClick={close}>
                 How it works
               </Link>
               <Link href="/fleet" onClick={close}>
@@ -68,7 +68,7 @@ export function LegalShell({ partner, onPartnerChange, children }: LegalShellPro
               <Link href="/faq" onClick={close}>
                 FAQ
               </Link>
-              <Link href="/#join" onClick={close}>
+              <Link href="/partner" onClick={close}>
                 {partner ? "Apply" : "Join as a shop"}
               </Link>
               <button
@@ -107,10 +107,10 @@ export function LegalShell({ partner, onPartnerChange, children }: LegalShellPro
               <Link href="/about" className="hover:text-white">
                 About
               </Link>
-              <Link href="/#why" className="hover:text-white">
+              <Link href="/#how" className="hover:text-white">
                 How it works
               </Link>
-              <Link href="/#join" className="hover:text-white">
+              <Link href="/partner" className="hover:text-white">
                 Become a partner
               </Link>
               <Link href="/fleet" className="hover:text-white">

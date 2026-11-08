@@ -12,14 +12,20 @@ import {
   RefundsPage,
   TermsPage,
 } from "./pages";
-import { usePageMeta, usePath } from "../lib/routing";
+import { navigate, usePageMeta, usePath } from "../lib/routing";
 
 export default function Root() {
   const path = usePath();
   const [partner, setPartner] = useState(false);
 
   if (path === "/") {
-    return <HomeRoute partner={partner} onPartnerChange={setPartner} />;
+    // back to the home page from an app route: load the static home
+    window.location.replace(window.location.href);
+    return null;
+  }
+
+  if (path === "/partner") {
+    return <PartnerRoute />;
   }
 
   const Page =
@@ -48,16 +54,10 @@ export default function Root() {
   );
 }
 
-function HomeRoute({
-  partner,
-  onPartnerChange,
-}: {
-  partner: boolean;
-  onPartnerChange: (next: boolean) => void;
-}) {
+function PartnerRoute() {
   usePageMeta(
-    "PEG | Laundry pickup in Ghana",
-    "Book a nearby laundry shop in Ghana. Pay with Mobile Money or card through Paystack after the shop weighs the load. Operated by Falcon Solutions.",
+    "PEG Partner | Run your laundry shop on PEG",
+    "PEG Partner is the app for laundry shops in Ghana: take nearby orders, confirm the weight at intake and track your earnings. Operated by Falcon Solutions.",
   );
 
   useEffect(() => {
@@ -67,5 +67,5 @@ function HomeRoute({
     }
   }, []);
 
-  return <Landing partner={partner} onPartnerChange={onPartnerChange} />;
+  return <Landing partner onPartnerChange={(next) => navigate(next ? "/partner" : "/")} />;
 }
