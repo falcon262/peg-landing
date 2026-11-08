@@ -10,12 +10,12 @@ https://www.justpegit.online/*  https://justpegit.online/:splat  301
 /peg.html        /           301
 # The home page is the static index.html. Every other route is the React app in app.html;
 # keep this list in step with APP_ROUTES in vite.config.ts.
-/about           /app.html   200
-/contact         /app.html   200
-/faq             /app.html   200
-/feedback        /app.html   200
-/fleet           /app.html   200
-/partner         /app.html   200
-/privacy         /app.html   200
-/refunds         /app.html   200
-/terms           /app.html   200
+/about           /app   200
+/contact         /app   200
+/faq             /app   200
+/feedback        /app   200
+/fleet           /app   200
+/partner         /app   200
+/privacy         /app   200
+/refunds         /app   200
+/terms           /app   200
