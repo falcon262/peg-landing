@@ -183,7 +183,7 @@ export default function App({ partner, onPartnerChange }: LandingProps) {
         ],
         [
           "How does pickup work?",
-          "You book a shop in PEG. A PEG rider collects the clothes and brings them back. The order shows your rider and where they are.",
+          "You book a shop in PEG. A PEG rider collects your clothes and brings them back. The order shows your rider and where they are, and you give the rider a 4-digit code at hand-over.",
         ],
       ]
 

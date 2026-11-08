@@ -21,8 +21,7 @@ export function normalizePath(pathname: string): string {
 
 export function navigate(to: string) {
   const url = new URL(to, window.location.origin);
-  // the home page is a static page of its own (index.html), not a route of this app
-  if (url.origin !== window.location.origin || url.pathname === "/") {
+  if (url.origin !== window.location.origin) {
     window.location.href = to;
     return;
   }
