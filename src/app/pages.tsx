@@ -25,7 +25,7 @@ export function ContactPage() {
   usePageMeta(`Contact ${CUSTOMER_APP}`, `Reach ${OPERATOR_NAME} about ${CUSTOMER_APP} at ${CONTACT_EMAIL}.`);
 
   return (
-    <LegalArticle eyebrow="Contact" title="Talk to the team that operates PEG">
+    <LegalArticle eyebrow="Contact" title="Talk to the team that operates Peg">
       <P>
         {OPERATOR_NAME} runs {CUSTOMER_APP} from {CONTACT_LOCATION}. Use these details for payments questions, shop
         applications, refunds, and anything else on this site.
@@ -66,19 +66,19 @@ export function FaqPage() {
       items: [
         {
           q: "When do I pay?",
-          a: "After the shop confirms the weight. PEG then shows the fee. You pay that fee in the app through Paystack.",
+          a: "After the shop confirms the weight. Peg then shows the fee. You pay that fee in the app through Paystack.",
         },
         {
           q: "Which methods can I use?",
-          a: "Mobile Money and card, through Paystack. That is the customer checkout for PEG.",
+          a: "Mobile Money and card, through Paystack. That is the customer checkout for Peg.",
         },
         {
           q: "Does the shop charge my card or MoMo themselves?",
-          a: "No. The shop does not collect the customer Paystack payment. Falcon Solutions is the merchant of record. You pay in PEG after the weight is confirmed.",
+          a: "No. The shop does not collect the customer Paystack payment. Falcon Solutions is the merchant of record. You pay in Peg after the weight is confirmed.",
         },
         {
           q: "Do you store wallets or move money between users in the app?",
-          a: "No. PEG does not keep a customer or shop wallet, and it does not transfer value between users in the app. Saved methods you see are labels only. The card or MoMo stays with Paystack.",
+          a: "No. Peg does not keep a customer or shop wallet, and it does not transfer value between users in the app. Saved methods you see are labels only. The card or MoMo stays with Paystack.",
         },
         {
           q: "Why is there no price until after pickup?",
@@ -91,7 +91,7 @@ export function FaqPage() {
       items: [
         {
           q: "How does pickup work?",
-          a: "You book a shop in PEG. A PEG rider collects your clothes, takes them to the shop and brings them back when they are ready. The order shows your rider and where they are, and you give the rider a 4-digit code when your clothes come back.",
+          a: "You book a shop in Peg. A Peg rider collects your clothes, takes them to the shop and brings them back when they are ready. The order shows your rider and where they are, and you give the rider a 4-digit code when your clothes come back.",
         },
         {
           q: "How much is delivery?",
@@ -115,12 +115,12 @@ export function FaqPage() {
           a: "With your phone number and a one-time code. There is no password.",
         },
         {
-          q: "How does a shop join PEG?",
-          a: `The shop applies in ${PARTNER_APP} and uploads a Ghana Card. Falcon staff review it and approve or reject. The shop cannot take PEG orders until that approval is in place.`,
+          q: "How does a shop join Peg?",
+          a: `The shop applies in ${PARTNER_APP} and uploads a Ghana Card. Falcon staff review it and approve or reject. The shop cannot take Peg orders until that approval is in place.`,
         },
         {
-          q: "Who operates PEG?",
-          a: `${OPERATOR_NAME} operates PEG in Ghana. Contact ${CONTACT_EMAIL} or ${CONTACT_PHONE}.`,
+          q: "Who operates Peg?",
+          a: `${OPERATOR_NAME} operates Peg in Ghana. Contact ${CONTACT_EMAIL} or ${CONTACT_PHONE}.`,
         },
       ],
     },
@@ -149,15 +149,15 @@ export function FaqPage() {
 export function FeedbackPage() {
   usePageMeta(
     `${CUSTOMER_APP} customer feedback`,
-    "Send PEG feedback to Falcon Solutions. We read it against the order when you include a reference.",
+    "Send Peg feedback to Falcon Solutions. We read it against the order when you include a reference.",
   );
 
-  const action = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("PEG customer feedback")}`;
+  const action = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Peg customer feedback")}`;
 
   return (
     <LegalArticle eyebrow="Customer feedback" title="Tell us what happened">
       <P>
-        This form opens your email app to {CONTACT_EMAIL}. Include the order reference from PEG if this is about a
+        This form opens your email app to {CONTACT_EMAIL}. Include the order reference from Peg if this is about a
         payment or a specific load. We match that to the Paystack transaction.
       </P>
       <form
@@ -242,7 +242,7 @@ export function TermsPage() {
       <H>2. Who you contract with</H>
       <P>
         {OPERATOR_NAME} operates the apps and is the merchant of record for customer checkout. Laundry work is
-        performed by the shop you book. Pickup and delivery are done by PEG riders, approved by Falcon Solutions and
+        performed by the shop you book. Pickup and delivery are done by Peg riders, approved by Falcon Solutions and
         paid per trip. The delivery fee is set by road distance and goes to Falcon Solutions, not to the shop.
       </P>
       <H>3. Accounts</H>
@@ -255,9 +255,9 @@ export function TermsPage() {
       <Ul
         items={[
           "There is no customer charge until the shop confirms the weight.",
-          "You then pay the displayed fee in PEG through Paystack, with Mobile Money or card.",
+          "You then pay the displayed fee in Peg through Paystack, with Mobile Money or card.",
           "The shop does not collect that customer Paystack payment.",
-          "PEG does not keep customer or shop wallets and does not transfer value between users in the app.",
+          "Peg does not keep customer or shop wallets and does not transfer value between users in the app.",
           "Saved payment methods are labels only.",
           "Shops are settled by Falcon separately from the customer Paystack charge.",
         ]}
@@ -270,7 +270,7 @@ export function TermsPage() {
       </P>
       <H>7. Acceptable use</H>
       <P>
-        Do not abuse the apps, submit false KYC, interfere with other users, or use PEG for anything other than
+        Do not abuse the apps, submit false KYC, interfere with other users, or use Peg for anything other than
         legitimate laundry bookings and related shop operations.
       </P>
       <H>8. Liability</H>
@@ -290,7 +290,7 @@ export function TermsPage() {
 export function PrivacyPage() {
   usePageMeta(
     `${CUSTOMER_APP} privacy policy`,
-    `How ${OPERATOR_NAME} handles PEG account, order, Ghana Card KYC, and Paystack payment data.`,
+    `How ${OPERATOR_NAME} handles Peg account, order, Ghana Card KYC, and Paystack payment data.`,
   );
 
   return (
@@ -306,7 +306,7 @@ export function PrivacyPage() {
           "Order details: shop, pickup notes, weight once the shop confirms it, fee, and status.",
           "Support messages you send us.",
           "For shops: application details and Ghana Card images used for KYC review.",
-          "Payment references returned by Paystack. We do not store full card numbers or MoMo PINs in PEG.",
+          "Payment references returned by Paystack. We do not store full card numbers or MoMo PINs in Peg.",
         ]}
       />
       <H>Why we collect it</H>
@@ -319,13 +319,13 @@ export function PrivacyPage() {
         items={[
           "Paystack, to process Mobile Money and card payments and refunds.",
           "The shop you booked, so they can wash the load. They do not receive your card or MoMo secrets.",
-          "The PEG rider on your order, who sees your pickup address and the order details to collect and return your clothes.",
+          "The Peg rider on your order, who sees your pickup address and the order details to collect and return your clothes.",
           "Falcon staff who approve or reject shop KYC.",
         ]}
       />
       <H>Wallets</H>
       <P>
-        PEG does not keep a stored-value wallet for customers or shops. Saved methods in the app are labels. Payment
+        Peg does not keep a stored-value wallet for customers or shops. Saved methods in the app are labels. Payment
         credentials stay with Paystack.
       </P>
       <H>Retention</H>
@@ -383,7 +383,7 @@ export function RefundsPage() {
       <H>Shops</H>
       <P>
         Shop payouts are separate from the customer Paystack charge. A customer refund does not pull funds from a shop
-        wallet in PEG, because PEG does not keep shop wallets.
+        wallet in Peg, because Peg does not keep shop wallets.
       </P>
       <H>Contact</H>
       <P>
@@ -394,14 +394,14 @@ export function RefundsPage() {
 }
 
 export function NotFoundPage() {
-  usePageMeta(`Page not found | ${CUSTOMER_APP}`, "That page is not on the PEG site.");
+  usePageMeta(`Page not found | ${CUSTOMER_APP}`, "That page is not on the Peg site.");
 
   return (
     <LegalArticle eyebrow="Missing page" title="That page is not here">
-      <P>The PEG site has a home page, FAQ, customer feedback, and the policies Paystack asked to see.</P>
+      <P>The Peg site has a home page, FAQ, customer feedback, and the policies Paystack asked to see.</P>
       <p className="text-[15px] font-semibold">
         <Link href="/" className="text-[#0b5c46]">
-          Back to PEG
+          Back to Peg
         </Link>
         {" · "}
         <Link href="/faq" className="text-[#0b5c46]">

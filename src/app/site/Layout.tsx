@@ -3,14 +3,14 @@ import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_TEL } from "../../config";
 import { Link } from "../../lib/routing";
 import { wrap } from "./ui";
 
-/* One header and one footer for every PEG page (DESIGN.md). */
+/* One header and one footer for every Peg page (DESIGN.md). */
 
 const NAV: [string, string][] = [
   ["/how-it-works", "How it works"],
-  ["/partner", "PEG Partner"],
+  ["/partner", "Peg Partner"],
   ["/faq", "FAQ"],
   ["/about", "About"],
-  ["/fleet", "The PEG trike"],
+  ["/fleet", "The Peg trike"],
 ];
 
 type Cta = "waitlist" | "apply";
@@ -37,7 +37,7 @@ function Header({ path, cta }: { path: string; cta: Cta }) {
     <header className="sticky top-0 z-50 border-b border-black/[0.06] bg-page/95 backdrop-blur">
       <div className={`${wrap} flex h-[76px] items-center gap-8`}>
         <Link href="/" className="flex shrink-0 items-center" onClick={() => setOpen(false)}>
-          <img src={partner ? "/assets/partner/54739.svg" : "/assets/client/4bcf8.svg"} alt={partner ? "PEG Partner" : "PEG"} className={partner ? "h-9 w-auto" : "h-9 w-[60px]"} />
+          <img src={partner ? "/assets/partner/54739.svg" : "/assets/client/4bcf8.svg"} alt={partner ? "Peg Partner" : "Peg"} className={partner ? "h-9 w-auto" : "h-9 w-[60px]"} />
         </Link>
         <nav aria-label="Main" className="ml-auto hidden items-center gap-7 lg:flex">
           {NAV.map(([href, label]) => (
@@ -92,15 +92,15 @@ function Footer() {
     <footer className="bg-ink text-white">
       <div className={`${wrap} grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-12`}>
         <div className="flex flex-col gap-4 lg:col-span-4">
-          <img src="/assets/client/2aa0f.svg" alt="PEG" className="h-9 w-[60px]" />
+          <img src="/assets/client/2aa0f.svg" alt="Peg" className="h-9 w-[60px]" />
           <p className="text-[24px] font-extrabold tracking-[-0.02em]">Laundry, sorted.</p>
           <p className="max-w-[34ch] text-[15px] leading-6 text-white/70">Laundry pickup for Accra. Coming soon to the App Store and Google Play.</p>
         </div>
         <div className={`${col} lg:col-span-2`}>
-          <p className="mb-1 font-bold text-white">PEG</p>
+          <p className="mb-1 font-bold text-white">Peg</p>
           <Link className={link} href="/how-it-works">How it works</Link>
-          <Link className={link} href="/partner">PEG Partner</Link>
-          <Link className={link} href="/fleet">The PEG trike</Link>
+          <Link className={link} href="/partner">Peg Partner</Link>
+          <Link className={link} href="/fleet">The Peg trike</Link>
           <Link className={link} href="/about">About</Link>
         </div>
         <div className={`${col} lg:col-span-2`}>
@@ -123,7 +123,7 @@ function Footer() {
         </div>
       </div>
       <div className={`${wrap} flex flex-wrap justify-between gap-3 border-t border-white/10 py-7 text-[13px] text-white/55`}>
-        <span>© {new Date().getFullYear()} PEG. Operated by Falcon Solutions, Accra.</span>
+        <span>© {new Date().getFullYear()} Peg. Operated by Falcon Solutions, Accra.</span>
         <span>Payments by Paystack: Mobile Money or card.</span>
       </div>
     </footer>

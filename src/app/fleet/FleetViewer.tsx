@@ -130,7 +130,7 @@ export default function FleetViewer() {
           ref={hostRef}
           className="absolute inset-0"
           role="img"
-          aria-label="3D model of the PEG cargo trike. Drag to rotate it."
+          aria-label="3D model of the Peg cargo trike. Drag to rotate it."
         />
 
         {failed ? (

@@ -2,7 +2,7 @@ import { useState, type FormEvent, type ReactNode } from "react";
 import { CONTACT_EMAIL } from "../../config";
 import { Link } from "../../lib/routing";
 
-/* Shared parts of the PEG site (DESIGN.md). Every page is built from these. */
+/* Shared parts of the Peg site (DESIGN.md). Every page is built from these. */
 
 export const wrap = "mx-auto w-full max-w-[1440px] px-5 md:px-10 lg:px-20";
 
@@ -82,7 +82,7 @@ export function SectionHead({ title, intro, light }: { title: ReactNode; intro?:
   );
 }
 
-/* a real PEG app screen in a phone frame */
+/* a real Peg app screen in a phone frame */
 export function Phone({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
   return (
     <div className={`w-[230px] shrink-0 rounded-[38px] bg-ink p-[7px] shadow-[0_30px_60px_-28px_rgba(0,0,0,0.55)] ${className}`}>
@@ -92,7 +92,7 @@ export function Phone({ src, alt, className = "" }: { src: string; alt: string; 
 }
 
 /* the signature: the rider travels the road and settles at the door */
-export function RouteCard({ title = "Your rider is on the way", line = "Follow PEG riders live in the app." }: { title?: string; line?: string }) {
+export function RouteCard({ title = "Your rider is on the way", line = "Follow Peg riders live in the app." }: { title?: string; line?: string }) {
   return (
     <div className="w-[270px] rounded-3xl bg-white p-4 text-ink shadow-[0_24px_50px_-24px_rgba(0,0,0,0.45)]" aria-hidden="true">
       <svg viewBox="0 0 240 170" className="h-auto w-full rounded-2xl bg-[#eef0e8]">
@@ -231,11 +231,11 @@ export function WaitlistBand() {
           <h2 id="waitlist-h" className="text-[34px] font-extrabold leading-[40px] tracking-[-0.03em] md:text-[52px] md:leading-[56px]">
             Your next laundry day? Peg it!
           </h2>
-          <p className="text-[18px] leading-7">Join the waitlist and we email you when PEG is in the App Store and Google Play.</p>
+          <p className="text-[18px] leading-7">Join the waitlist and we email you when Peg is in the App Store and Google Play.</p>
         </div>
         <div className="rounded-3xl bg-white p-6 shadow-[0_30px_60px_-34px_rgba(0,0,0,0.4)] md:p-8 lg:col-span-6 lg:col-start-7">
           <MailForm
-            subject="PEG waitlist"
+            subject="Peg waitlist"
             button="Join the waitlist"
             tone="ink"
             note={`This opens an email to ${CONTACT_EMAIL}. We write once, when the apps are out.`}

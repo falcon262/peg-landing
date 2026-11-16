@@ -1,11 +1,11 @@
-# PEG design system
+# Peg design system
 
-One system for every page of justpegit.online: the customer pages, PEG Partner, How it works, FAQ, About, the trike, and the legal pages. It is built from PEG's own app (`FreshPress/docs`), the previous site and the best ideas of the Figma study in `falcon-solutions/images/FalPeg`. It keeps the rule from that study: **same PEG, every page**.
+One system for every page of justpegit.online: the customer pages, Peg Partner, How it works, FAQ, About, the trike, and the legal pages. It is built from Peg's own app (`FreshPress/docs`), the previous site and the best ideas of the Figma study in `falcon-solutions/images/FalPeg`. It keeps the rule from that study: **same Peg, every page**.
 
 ## Principles
 
 1. **The app is the star.** Show the real app screens in phone frames: shops nearby, tracking, payment, updates and the partner dashboard. Photographs of riders, shops and fresh laundry support them.
-2. **Customer yellow, partner green.** Yellow carries the customer pages and green carries PEG Partner. The components and layout do not change between them.
+2. **Customer yellow, partner green.** Yellow carries the customer pages and green carries Peg Partner. The components and layout do not change between them.
 3. **Honest and clear.** No invented prices, reviews, user counts or store downloads; the apps say "coming soon". Example figures in app screens (4.2 kg, GH₵ 42.00) are illustrative.
 
 ## Colour
@@ -18,7 +18,7 @@ One system for every page of justpegit.online: the customer pages, PEG Partner, 
 | `page` | `#F8F8F8` | Page ground |
 | `white` | `#FFFFFF` | Cards |
 | `navy` | `#16276B` | Inside the customer app; one feature band per page at most |
-| `green` | `#0B5C46` | PEG Partner hero, buttons and accents |
+| `green` | `#0B5C46` | Peg Partner hero, buttons and accents |
 | `mint` | `#E6F0EC` | Partner panels |
 | `grey` | `#5A5A5A` | Secondary text (6.6:1 on page) |
 | `rule` | `#E8E8E8` | Borders |
@@ -44,14 +44,14 @@ No uppercase eyebrows. A short pill label ("Coming soon to Accra") is the only l
 
 ## Components
 
-- **Header:** the PEG logo; How it works, PEG Partner, FAQ, About and The PEG trike; and "Join the waitlist" (ink). On the partner page the button is "Apply as a shop" (green). On phones a menu button opens a sheet.
+- **Header:** the Peg logo; How it works, Peg Partner, FAQ, About and The Peg trike; and "Join the waitlist" (ink). On the partner page the button is "Apply as a shop" (green). On phones a menu button opens a sheet.
 - **Hero:** a yellow band (green on Partner). It has a pill label, the h1, a lead, one primary button and the coming-soon line on the left, and on the right a phone with a real app screen plus one floating card.
-- **Route card:** a small map where the rider travels the route and settles at the door. This is PEG's signature motion; it holds at the end for reduced motion.
+- **Route card:** a small map where the rider travels the route and settles at the door. This is Peg's signature motion; it holds at the end for reduced motion.
 - **Step cards:** five numbered steps (customers) or three (partners), each with a title and one line.
 - **Feature split:** text and facts on one side, and a phone on a cream (or mint) panel on the other.
-- **Service cards:** Wash & Fold, Dry Clean, Iron Only and Bedding, with PEG's own icons.
+- **Service cards:** Wash & Fold, Dry Clean, Iron Only and Bedding, with Peg's own icons.
 - **FAQ:** an accordion grouped by topic.
-- **Waitlist band:** yellow, with the form on a white card: name, neighbourhood and email. It opens an email to Falcon.
+- **Waitlist band:** yellow, with the form on a white card: name, neighbourhood and email. It opens an email to Peg support.
 - **Footer:** ink. The logo, "Laundry, sorted.", the page links, contact details, legal links, and "Operated by Falcon Solutions".
 - **Legal pages:** a page header band plus one 720px column of text.
 
