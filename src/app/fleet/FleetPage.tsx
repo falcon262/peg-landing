@@ -12,7 +12,7 @@ const notes = [
   },
   {
     title: "A closed laundry box",
-    body: "The open cage is replaced by a closed box with twin rear doors. Orders stay dry and clean, and every side carries the PEG livery.",
+    body: "The open cage is replaced by a closed box with twin rear doors. Orders stay dry and clean, and every side carries the Peg livery.",
   },
   {
     title: "A rail for pressed clothes",
@@ -22,16 +22,16 @@ const notes = [
 
 export default function FleetPage() {
   usePageMeta(
-    "PEG cargo trike | PEG",
-    "Explore the PEG cargo trike in 3D: a concept laundry pickup vehicle built on the SL150ZH-200L, with a closed box and a garment rail.",
+    "Peg cargo trike | Peg",
+    "Explore the Peg cargo trike in 3D: a concept laundry pickup vehicle built on the SL150ZH-200L, with a closed box and a garment rail.",
   );
 
   return (
     <>
       <PageHeader
-        pill="The PEG trike, a concept"
-        title="The PEG cargo trike"
-        lead="A concept for laundry pickup and delivery in Accra, in PEG colours. Turn it around, switch the livery, open the doors and look inside. PEG riders handle pickup and delivery today; this is how a PEG trike could look."
+        pill="The Peg trike, a concept"
+        title="The Peg cargo trike"
+        lead="A concept for laundry pickup and delivery in Accra, in Peg colours. Turn it around, switch the livery, open the doors and look inside. Peg riders handle pickup and delivery today; this is how a Peg trike could look."
       />
       <div className="h-10 md:h-16" />
       <section className="mx-auto max-w-6xl px-5 md:px-8" aria-label="3D trike viewer">

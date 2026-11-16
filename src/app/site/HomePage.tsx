@@ -3,9 +3,9 @@ import { Button, Facts, Faq, H2, Hero, Phone, PhonePanel, RouteCard, Section, Se
 
 export const STEPS: [string, string][] = [
   ["Choose your shop", "Book a vetted laundry shop near you. Only shops that serve your area appear."],
-  ["Meet your rider", "A PEG rider collects your clothes. Follow your rider live on the map."],
+  ["Meet your rider", "A Peg rider collects your clothes. Follow your rider live on the map."],
   ["See the weight and fee", "The shop weighs your load at intake. You see both on your order."],
-  ["Pay in the app", "Use Mobile Money or card through Paystack. PEG keeps no wallet."],
+  ["Pay in the app", "Use Mobile Money or card through Paystack. Peg keeps no wallet."],
   ["Get it back", "Give your rider the 4-digit code at hand-over. Laundry, sorted."],
 ];
 
@@ -24,15 +24,15 @@ const PROMISES: [string, string, string][] = [
 
 export default function HomePage() {
   usePageMeta(
-    "PEG | Laundry pickup in Accra",
-    "Book a nearby laundry shop in Accra. A PEG rider collects your clothes, the shop weighs them, and you pay with Mobile Money or card. Operated by Falcon Solutions.",
+    "Peg | Laundry pickup in Accra",
+    "Book a nearby laundry shop in Accra. A Peg rider collects your clothes, the shop weighs them, and you pay with Mobile Money or card. Operated by Falcon Solutions.",
   );
   return (
     <>
       <Hero
         pill="Coming soon to Accra"
         title="Laundry, sorted."
-        lead="Book a nearby laundry shop. A PEG rider collects your clothes, the shop weighs them, and you pay in the app with MoMo or card."
+        lead="Book a nearby laundry shop. A Peg rider collects your clothes, the shop weighs them, and you pay in the app with MoMo or card."
         actions={
           <>
             <Button href="#waitlist">Join the waitlist</Button>
@@ -44,8 +44,8 @@ export default function HomePage() {
         note="App Store and Google Play: coming soon."
         visual={
           <div className="relative flex items-end gap-4 pb-6">
-            <Phone src="/assets/app/feed.png" alt="The PEG app home screen, with vetted laundry shops near you" />
-            <Phone src="/assets/app/tracking.png" alt="A PEG order tracked from pickup to the weigh-in" className="mb-10 hidden sm:block" />
+            <Phone src="/assets/app/feed.png" alt="The Peg app home screen, with vetted laundry shops near you" />
+            <Phone src="/assets/app/tracking.png" alt="A Peg order tracked from pickup to the weigh-in" className="mb-10 hidden sm:block" />
             <div className="absolute -left-6 bottom-0 hidden md:block lg:-left-16">
               <RouteCard />
             </div>
@@ -53,7 +53,7 @@ export default function HomePage() {
         }
       />
 
-      <section className="bg-navy text-white" aria-label="What PEG promises">
+      <section className="bg-navy text-white" aria-label="What Peg promises">
         <div className={`${wrap} grid gap-8 py-10 md:grid-cols-3`}>
           {PROMISES.map(([icon, title, text]) => (
             <div key={title} className="flex items-start gap-4">
@@ -68,7 +68,7 @@ export default function HomePage() {
       </section>
 
       <Section id="steps">
-        <SectionHead title="Your laundry day, in five steps" intro="From choosing a nearby shop to the final hand-over, PEG brings the moving parts together." />
+        <SectionHead title="Your laundry day, in five steps" intro="From choosing a nearby shop to the final hand-over, Peg brings the moving parts together." />
         <Steps items={STEPS} />
         <div className="mt-8">
           <TextLink href="/how-it-works">See how it works</TextLink>
@@ -94,13 +94,13 @@ export default function HomePage() {
         <Split
           visual={
             <PhonePanel>
-              <Phone src="/assets/app/order.png" alt="Booking a PEG pickup: estimated weight, pickup and delivery, and your location" />
+              <Phone src="/assets/app/order.png" alt="Booking a Peg pickup: estimated weight, pickup and delivery, and your location" />
               <Phone src="/assets/app/tracking.png" alt="The order timeline: picked up, at the shop, weighed" className="hidden sm:block" />
             </PhonePanel>
           }
         >
           <H2>Follow the rider. See the fee.</H2>
-          <p className="text-[17px] leading-7 text-grey">Watch your PEG rider on the map. When the shop weighs your load at intake, the weight and the fee appear on your order.</p>
+          <p className="text-[17px] leading-7 text-grey">Watch your Peg rider on the map. When the shop weighs your load at intake, the weight and the fee appear on your order.</p>
           <Facts
             items={[
               ["Delivery", "Priced by road distance"],
@@ -116,12 +116,12 @@ export default function HomePage() {
           flip
           visual={
             <PhonePanel>
-              <Phone src="/assets/app/payment.png" alt="Choosing MTN Mobile Money or a card to pay for a PEG order" />
+              <Phone src="/assets/app/payment.png" alt="Choosing MTN Mobile Money or a card to pay for a Peg order" />
             </PhonePanel>
           }
         >
           <H2>Your payment. No extra wallet.</H2>
-          <p className="text-[17px] leading-7 text-grey">Pay in the app with Mobile Money or card through Paystack. PEG keeps no wallet: your cards and MoMo stay with Paystack.</p>
+          <p className="text-[17px] leading-7 text-grey">Pay in the app with Mobile Money or card through Paystack. Peg keeps no wallet: your cards and MoMo stay with Paystack.</p>
           <Facts
             items={[
               ["Methods", "Mobile Money or card"],
@@ -137,9 +137,9 @@ export default function HomePage() {
           <div className="flex flex-col items-start gap-5 lg:col-span-5">
             <span className="inline-flex h-8 items-center rounded-full bg-green px-3.5 text-[13px] font-semibold text-white">For laundry shops</span>
             <H2 id="partner-h">Your neighbourhood. Your next order.</H2>
-            <p className="text-[17px] leading-7 text-grey">Join PEG Partner to take nearby orders, request PEG riders and see your earnings. Shop applications are reviewed by Falcon Solutions.</p>
+            <p className="text-[17px] leading-7 text-grey">Join Peg Partner to take nearby orders, request Peg riders and see your earnings. Shop applications are reviewed by Falcon Solutions.</p>
             <Button href="/partner" tone="green">
-              See PEG Partner
+              See Peg Partner
             </Button>
           </div>
           <img src="/assets/photos/shop-folding.jpg" alt="A laundry shop owner folding a shirt at his counter" loading="lazy" className="aspect-[4/3] w-full rounded-3xl object-cover lg:col-span-6 lg:col-start-7" />
@@ -156,10 +156,10 @@ export default function HomePage() {
           <div className="lg:col-span-7 lg:col-start-6">
             <Faq
               items={[
-                ["When do I pay?", "After the shop confirms the weight. PEG then shows the fee, and you pay it in the app through Paystack with Mobile Money or card."],
+                ["When do I pay?", "After the shop confirms the weight. Peg then shows the fee, and you pay it in the app through Paystack with Mobile Money or card."],
                 ["Do I need to know the weight?", "No. Laundry is priced by weight, so the shop weighs the load at intake before anyone quotes a fee."],
-                ["Who collects my laundry?", "A PEG rider. The app shows your rider and where they are, and you give them a 4-digit code when your clothes come back."],
-                ["When can I download PEG?", "PEG is coming to the App Store and Google Play. Join the waitlist and we email you when it is out."],
+                ["Who collects my laundry?", "A Peg rider. The app shows your rider and where they are, and you give them a 4-digit code when your clothes come back."],
+                ["When can I download Peg?", "Peg is coming to the App Store and Google Play. Join the waitlist and we email you when it is out."],
               ]}
             />
           </div>

@@ -15,7 +15,7 @@ import {
   type ViewId,
 } from "./trikeData";
 
-// PEG wordmark, from public/assets/client/4bcf8.svg (viewBox 94 x 57).
+// Peg wordmark, from public/assets/client/4bcf8.svg (viewBox 94 x 57).
 const LOGO = {
   w: 94,
   h: 57,
@@ -348,7 +348,7 @@ export function createTrikeScene(
     drawLogo(ctx, px + 34, py + 30, 1.6, GOLD, GOLD, true);
     ctx.fillStyle = "#ffffff";
     ctx.font = `600 30px ${BODY}`;
-    ctx.fillText("Get the PEG app", px + 116, py + 66);
+    ctx.fillText("Get the Peg app", px + 116, py + 66);
     ctx.fillStyle = GOLD;
     ctx.font = `700 40px ${BODY}`;
     ctx.fillText(SITE, px + 116, py + 114);
@@ -393,7 +393,7 @@ export function createTrikeScene(
     ctx.font = `600 26px ${BODY}`;
     ctx.fillText("Download", px + 104, py + 56);
     ctx.font = `800 40px ${DISPLAY}`;
-    ctx.fillText("the PEG app", px + 104, py + 100);
+    ctx.fillText("the Peg app", px + 104, py + 100);
     ctx.textAlign = "center";
     ctx.fillStyle = "rgba(255,255,255,0.7)";
     ctx.font = `500 30px ${BODY}`;
