@@ -4,7 +4,7 @@ import { Button, Facts, Faq, H2, Hero, Phone, PhonePanel, RouteCard, Section, Se
 export const STEPS: [string, string][] = [
   ["Choose your shop", "Book a vetted laundry shop near you. Only shops that serve your area appear."],
   ["Meet your rider", "A Peg rider collects your clothes. Follow your rider live on the map."],
-  ["See the weight and fee", "The shop weighs your load at intake. You see both on your order."],
+  ["See the total first", "The shop reviews your clothes at intake. The total appears on your order before you pay."],
   ["Pay in the app", "Use Mobile Money or card through Paystack. Peg keeps no wallet."],
   ["Get it back", "Give your rider the 4-digit code at hand-over. Laundry? Sorted!"],
 ];
@@ -18,7 +18,7 @@ const SERVICES: [string, string, string, string][] = [
 
 const PROMISES: [string, string, string][] = [
   ["/assets/client/c9ac7-gold.svg", "Vetted shops near you", "Every partner shop is approved by Falcon Digital Solutions."],
-  ["/assets/client/a5ca7-gold.svg", "Pay after the weigh-in", "The fee comes from the shop's scale, never a guess."],
+  ["/assets/client/a5ca7-gold.svg", "Pay after the shop reviews", "The total comes from your actual clothes, never a guess."],
   ["/assets/client/beb53-gold.svg", "Every step in view", "From pickup to hand-over, the app keeps you posted."],
 ];
 
@@ -100,7 +100,7 @@ export default function HomePage() {
           }
         >
           <H2>Follow the rider. See the fee.</H2>
-          <p className="text-[17px] leading-7 text-grey">Watch your Peg rider on the map. When the shop weighs your load at intake, the weight and the fee appear on your order.</p>
+          <p className="text-[17px] leading-7 text-grey">Watch your Peg rider on the map. When the shop reviews your clothes at intake, the total appears on your order.</p>
           <Facts
             items={[
               ["Delivery", "Priced by road distance"],
@@ -125,7 +125,7 @@ export default function HomePage() {
           <Facts
             items={[
               ["Methods", "Mobile Money or card"],
-              ["When", "After the shop confirms the weight"],
+              ["When", "After the shop reviews your clothes"],
               ["Refunds", "Back to the original method"],
             ]}
           />
@@ -156,8 +156,8 @@ export default function HomePage() {
           <div className="lg:col-span-7 lg:col-start-6">
             <Faq
               items={[
-                ["When do I pay?", "After the shop confirms the weight. Peg then shows the fee, and you pay it in the app through Paystack with Mobile Money or card."],
-                ["Do I need to know the weight?", "No. Laundry is priced by weight, so the shop weighs the load at intake before anyone quotes a fee."],
+                ["When do I pay?", "After the shop reviews your clothes and confirms the total. Peg then shows the fee, and you pay it in the app through Paystack with Mobile Money or card."],
+                ["Do I need to know the weight?", "No. The shop reviews your clothes at intake, weighing anything priced by weight, and confirms the total before you pay."],
                 ["Who collects my laundry?", "A Peg rider. The app shows your rider and where they are, and you give them a 4-digit code when your clothes come back."],
                 ["When can I download Peg?", "Peg is coming to the App Store and Google Play. Join the waitlist and we email you when it is out."],
               ]}

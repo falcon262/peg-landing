@@ -129,7 +129,7 @@ export default function PartnerPage() {
                 ["Who is Peg Partner for?", "Laundry businesses in Accra who want nearby customers and one place to run intake, washing and hand-over."],
                 ["What do I need to register?", "Your shop details and a Ghana Card, submitted in Peg Partner. Falcon staff then approve or reject. You cannot take Peg orders until approval is in place."],
                 ["How do pickups reach my shop?", "Tap Request Peg rider on an accepted pickup order. Peg offers the trip to the nearest free riders; if nobody takes it you can ask again, or Peg assigns one. Confirm in the app when the clothes arrive."],
-                ["Do shops collect customer payments?", "No. The customer pays Falcon Digital Solutions through Paystack after you confirm the weight. Falcon settles shops separately. Peg keeps no shop wallet."],
+                ["Do shops collect customer payments?", "No. The customer pays Falcon Digital Solutions through Paystack after you review the clothes and confirm the total. Falcon settles shops separately. Peg keeps no shop wallet."],
               ]}
             />
           </div>

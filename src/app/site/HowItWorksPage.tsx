@@ -17,9 +17,9 @@ const STEPS: { title: string; text: string; facts: [string, string][]; src: stri
     alt: "Your Peg orders: active pickups and recent history",
   },
   {
-    title: "The shop weighs your load",
-    text: "At intake, the shop weighs your clothes. The weight and the fee appear on your order before any washing starts.",
-    facts: [["Weighed", "At the shop, at intake"], ["Shown", "Weight and fee on your order"], ["Example", "4.2 kg, GH₵ 42.00 (illustrative)"]],
+    title: "The shop reviews your clothes",
+    text: "At intake, the shop reviews your clothes, weighing anything priced by weight. The total appears on your order before any washing starts.",
+    facts: [["Reviewed", "At the shop, at intake"], ["Shown", "The total on your order"], ["Example", "4.2 kg, GH₵ 42.00 (illustrative)"]],
     src: "/assets/app/tracking.png",
     alt: "The order timeline showing the final weight and fee",
   },
@@ -40,7 +40,7 @@ const STEPS: { title: string; text: string; facts: [string, string][]; src: stri
 ];
 
 export default function HowItWorksPage() {
-  usePageMeta("How Peg works | Laundry pickup in Accra", "Five steps from your laundry pile to the hand-over: choose a shop, meet your rider, see the weight and fee, pay in the app, get it back.");
+  usePageMeta("How Peg works | Laundry pickup in Accra", "Five steps from your laundry pile to the hand-over: choose a shop, meet your rider, see the total, pay in the app, get it back.");
   return (
     <>
       <Hero
@@ -84,7 +84,7 @@ export default function HowItWorksPage() {
           </article>
           <article className="rounded-3xl bg-white p-7 ring-1 ring-rule">
             <h3 className="text-[22px] font-bold">Drop-off</h3>
-            <p className="mt-2 text-[16px] leading-7 text-grey">Take your load to the shop on your way. The shop still weighs it and the fee still appears in the app before you pay.</p>
+            <p className="mt-2 text-[16px] leading-7 text-grey">Take your load to the shop on your way. The shop still reviews it and the total still appears in the app before you pay.</p>
           </article>
         </div>
       </Section>
