@@ -25,7 +25,7 @@ export default function PartnerPage() {
             Apply as a shop
           </Button>
         }
-        note="Shop applications are reviewed by Falcon Solutions."
+        note="Shop applications are reviewed by Falcon Digital Solutions."
         visual={
           <div className="flex items-end gap-4 pb-2">
             <Phone src="/assets/app/partner-dashboard.png" alt="The Peg Partner dashboard: pending, active and completed orders and earnings" />
@@ -55,7 +55,7 @@ export default function PartnerPage() {
             ["Take the order", "Accept nearby orders for the areas your shop serves."],
             ["Request the pickup", "Tap Request Peg rider. The nearest free rider collects the clothes."],
             ["Confirm the weight", "Weigh the load at intake. The customer sees the fee and pays."],
-            ["Get paid", "Falcon Solutions settles your shop to MoMo or a bank account."],
+            ["Get paid", "Falcon Digital Solutions settles your shop to MoMo or a bank account."],
           ]}
         />
       </Section>
@@ -74,7 +74,7 @@ export default function PartnerPage() {
           <Facts
             items={[
               ["Weigh-in", "Confirmed in the app at intake"],
-              ["Customer pays", "Falcon Solutions, through Paystack"],
+              ["Customer pays", "Falcon Digital Solutions, through Paystack"],
               ["Your payout", "Mobile Money or a bank account"],
             ]}
           />
@@ -89,7 +89,7 @@ export default function PartnerPage() {
               {[
                 ["Tell us about your shop", "Your shop, your contact details and the areas you serve."],
                 ["Submit your Ghana Card", "In the Peg Partner app, as part of setup. It is never shown on this site."],
-                ["Falcon Solutions reviews", "Approved shops can take Peg orders."],
+                ["Falcon Digital Solutions reviews", "Approved shops can take Peg orders."],
               ].map(([t, d], i) => (
                 <li key={t} className="flex gap-4 rounded-2xl bg-white p-5 ring-1 ring-rule">
                   <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-green text-[14px] font-extrabold text-white">{i + 1}</span>
@@ -129,7 +129,7 @@ export default function PartnerPage() {
                 ["Who is Peg Partner for?", "Laundry businesses in Accra who want nearby customers and one place to run intake, washing and hand-over."],
                 ["What do I need to register?", "Your shop details and a Ghana Card, submitted in Peg Partner. Falcon staff then approve or reject. You cannot take Peg orders until approval is in place."],
                 ["How do pickups reach my shop?", "Tap Request Peg rider on an accepted pickup order. Peg offers the trip to the nearest free riders; if nobody takes it you can ask again, or Peg assigns one. Confirm in the app when the clothes arrive."],
-                ["Do shops collect customer payments?", "No. The customer pays Falcon Solutions through Paystack after you confirm the weight. Falcon settles shops separately. Peg keeps no shop wallet."],
+                ["Do shops collect customer payments?", "No. The customer pays Falcon Digital Solutions through Paystack after you confirm the weight. Falcon settles shops separately. Peg keeps no shop wallet."],
               ]}
             />
           </div>

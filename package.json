@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Independent Peg site for Ghana laundry pickup, operated by Falcon Solutions.",
+  "description": "Independent Peg site for Ghana laundry pickup, operated by Falcon Digital Solutions.",
   "packageManager": "pnpm@10.12.4",
   "engines": {
     "node": ">=22"

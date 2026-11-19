@@ -74,7 +74,7 @@ export function FaqPage() {
         },
         {
           q: "Does the shop charge my card or MoMo themselves?",
-          a: "No. The shop does not collect the customer Paystack payment. Falcon Solutions is the merchant of record. You pay in Peg after the weight is confirmed.",
+          a: "No. The shop does not collect the customer Paystack payment. Falcon Digital Solutions is the merchant of record. You pay in Peg after the weight is confirmed.",
         },
         {
           q: "Do you store wallets or move money between users in the app?",
@@ -128,7 +128,7 @@ export function FaqPage() {
 
   return (
     <>
-      <PageHeader pill="FAQ" title="Questions people actually ask" lead="Paying, pickup and delivery, accounts and shops. Anything else goes to the team at Falcon Solutions." />
+      <PageHeader pill="FAQ" title="Questions people actually ask" lead="Paying, pickup and delivery, accounts and shops. Anything else goes to the team at Falcon Digital Solutions." />
       <div className={`${wrap} grid gap-14 py-14 md:py-20`}>
         {groups.map((group) => (
           <section key={group.title} className="grid gap-6 lg:grid-cols-12 lg:gap-6" aria-labelledby={`faq-${group.title}`}>
@@ -149,7 +149,7 @@ export function FaqPage() {
 export function FeedbackPage() {
   usePageMeta(
     `${CUSTOMER_APP} customer feedback`,
-    "Send Peg feedback to Falcon Solutions. We read it against the order when you include a reference.",
+    "Send Peg feedback to Falcon Digital Solutions. We read it against the order when you include a reference.",
   );
 
   const action = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Peg customer feedback")}`;
@@ -242,8 +242,8 @@ export function TermsPage() {
       <H>2. Who you contract with</H>
       <P>
         {OPERATOR_NAME} operates the apps and is the merchant of record for customer checkout. Laundry work is
-        performed by the shop you book. Pickup and delivery are done by Peg riders, approved by Falcon Solutions and
-        paid per trip. The delivery fee is set by road distance and goes to Falcon Solutions, not to the shop.
+        performed by the shop you book. Pickup and delivery are done by Peg riders, approved by Falcon Digital Solutions and
+        paid per trip. The delivery fee is set by road distance and goes to Falcon Digital Solutions, not to the shop.
       </P>
       <H>3. Accounts</H>
       <P>

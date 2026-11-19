@@ -126,7 +126,7 @@ function Footer() {
         </div>
       </div>
       <div className={`${wrap} flex flex-wrap justify-between gap-3 border-t border-white/10 py-7 text-[13px] text-white/55`}>
-        <span>© {new Date().getFullYear()} Peg. Operated by Falcon Solutions, Accra.</span>
+        <span>© {new Date().getFullYear()} Peg. Operated by Falcon Digital Solutions, Accra.</span>
         <span>Payments by Paystack: Mobile Money or card.</span>
       </div>
     </footer>

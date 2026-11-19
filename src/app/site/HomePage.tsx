@@ -17,7 +17,7 @@ const SERVICES: [string, string, string, string][] = [
 ];
 
 const PROMISES: [string, string, string][] = [
-  ["/assets/client/c9ac7-gold.svg", "Vetted shops near you", "Every partner shop is approved by Falcon Solutions."],
+  ["/assets/client/c9ac7-gold.svg", "Vetted shops near you", "Every partner shop is approved by Falcon Digital Solutions."],
   ["/assets/client/a5ca7-gold.svg", "Pay after the weigh-in", "The fee comes from the shop's scale, never a guess."],
   ["/assets/client/beb53-gold.svg", "Every step in view", "From pickup to hand-over, the app keeps you posted."],
 ];
@@ -25,7 +25,7 @@ const PROMISES: [string, string, string][] = [
 export default function HomePage() {
   usePageMeta(
     "Peg | Laundry pickup in Accra",
-    "Book a nearby laundry shop in Accra. A Peg rider collects your clothes and you pay seamlessly after the shop reviews your clothes. Operated by Falcon Solutions.",
+    "Book a nearby laundry shop in Accra. A Peg rider collects your clothes and you pay seamlessly after the shop reviews your clothes. Operated by Falcon Digital Solutions.",
   );
   return (
     <>
@@ -137,7 +137,7 @@ export default function HomePage() {
           <div className="flex flex-col items-start gap-5 lg:col-span-5">
             <span className="inline-flex h-8 items-center rounded-full bg-green px-3.5 text-[13px] font-semibold text-white">For laundry shops</span>
             <H2 id="partner-h">Your neighbourhood. Your next order.</H2>
-            <p className="text-[17px] leading-7 text-grey">Join Peg Partner to take nearby orders, request Peg riders and see your earnings. Shop applications are reviewed by Falcon Solutions.</p>
+            <p className="text-[17px] leading-7 text-grey">Join Peg Partner to take nearby orders, request Peg riders and see your earnings. Shop applications are reviewed by Falcon Digital Solutions.</p>
             <Button href="/partner" tone="green">
               See Peg Partner
             </Button>

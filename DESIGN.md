@@ -52,7 +52,7 @@ No uppercase eyebrows. A short pill label ("Coming soon to Accra") is the only l
 - **Service cards:** Wash & Fold, Dry Clean, Iron Only and Bedding, with Peg's own icons.
 - **FAQ:** an accordion grouped by topic.
 - **Waitlist band:** yellow, with the form on a white card: name, neighbourhood and email. It opens an email to Peg support.
-- **Footer:** ink. The logo, "Laundry? Sorted!" (the tagline, written exactly so), the page links, contact details, legal links, and "Operated by Falcon Solutions".
+- **Footer:** ink. The logo, "Laundry? Sorted!" (the tagline, written exactly so), the page links, contact details, legal links, and "Operated by Falcon Digital Solutions".
 - **Legal pages:** a page header band plus one 720px column of text.
 
 ## Motion
