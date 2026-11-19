@@ -284,28 +284,37 @@ export function TermsPage() {
         </Link>
         .
       </P>
-      <H>8. Reviews</H>
+      <H>8. Your data</H>
+      <P>
+        We use your data only to provide Peg, as set out in the{" "}
+        <Link href="/privacy" className="font-semibold underline">
+          privacy policy
+        </Link>
+        , and never sell it. Shops and riders may use customers' details only to complete the order or trip they were
+        given, and must not keep, share or use them for anything else.
+      </P>
+      <H>9. Reviews</H>
       <P>
         Reviews must be honest and about your own order. Peg may remove reviews that are abusive, false or unrelated.
       </P>
-      <H>9. Acceptable use</H>
+      <H>10. Acceptable use</H>
       <P>
         Do not misuse the apps, give false identity details, harass shops, riders or customers, or use Peg for anything
         other than real laundry orders and the work that goes with them. Peg may suspend accounts that break these terms.
       </P>
-      <H>10. Liability</H>
+      <H>11. Liability</H>
       <P>
         Shops are responsible for the laundry work, and riders for the care of clothes while they carry them.{" "}
         {OPERATOR_NAME} is responsible for running the apps and taking payments. As far as Ghanaian law allows, none of us
         is liable for indirect or consequential loss. Nothing in these terms limits liability that cannot legally be
         limited.
       </P>
-      <H>11. Changes</H>
+      <H>12. Changes</H>
       <P>
         We may update these terms. The date of the latest change is shown at the top of this page. Using Peg after a
         change means you accept the updated terms.
       </P>
-      <H>12. Contact</H>
+      <H>13. Contact</H>
       <P>
         {OPERATOR_NAME} · {CONTACT_EMAIL} · {CONTACT_PHONE} · {CONTACT_LOCATION}
       </P>
@@ -326,30 +335,31 @@ export function PrivacyPage() {
         riders), and this website. This policy explains what we collect in those apps, why, who we share it with and how
         you can delete it.
       </P>
-      <H>What we collect</H>
+      <H>What we collect and why</H>
+      <P>Each type of data below is listed with the reason we collect it and the legal basis for using it.</P>
       <Ul
         items={[
-          "Account details: your name, phone number, email address and, if you add one, a profile photo. One-time codes sent to your phone are used to sign you in.",
-          "Addresses and location: the pickup and delivery addresses you save, with their map pin. Peg can use your phone's location to place the pin if you allow it.",
-          "Rider location: Peg Rider shares the rider's precise location while they are online or on a trip, so customers can follow their delivery and nearby trips can be offered. It stops when the rider goes offline.",
-          "Orders: the shop, services, pickup notes, weight and total the shop confirms, status updates and the hand-over code.",
-          "Payments: payment references and status from Paystack. If you choose to save a card, we keep the card brand, last four digits, expiry date and a Paystack token that lets Paystack charge it again. We never see or store your full card number, CVV or Mobile Money PIN.",
-          "For shops and riders: business or vehicle details, a Ghana Card number and photo for identity checks, and payout details (Mobile Money or bank account).",
-          "Reviews and ratings you leave for shops and riders, and messages you send to Peg support.",
-          "A device token so we can send you notifications about your orders and trips.",
+          "Account details (name, phone number, email address). Why: to create your account, sign you in with one-time codes sent to your phone, contact you about your orders, and let your shop and rider know who they are serving. Basis: needed to provide the service you sign up for.",
+          "Profile photo (optional). Why: to show on your account so shops and riders can recognise you. Basis: your consent; you can remove it at any time.",
+          "Saved addresses and map pins. Why: so a rider can find you for pickup and delivery, and so we can show laundries that serve your area and price delivery by distance. Basis: needed to provide the service.",
+          "Your phone's location (optional). Why: only to place your map pin and find laundries near you when you allow it. You can refuse and place your pin by hand. Basis: your consent, given in your phone's settings.",
+          "Rider location (Peg Rider only). Why: so customers can follow their delivery, so nearby trips can be offered, and so we can confirm a rider was at each stop before they are paid. Shared only while the rider is online or on a trip. Basis: needed to provide the service.",
+          "Orders (shop, services, pickup notes, the total the shop confirms, status updates and the hand-over code). Why: to run your order from booking to return, and to keep a record for support, disputes and refunds. Basis: needed to provide the service.",
+          "Payment records (Paystack references and status). Why: to confirm you paid, send refunds and pay shops and riders. Basis: needed to provide the service, and to meet Ghanaian tax and accounting rules.",
+          "Saved cards (optional: card brand, last four digits, expiry and a Paystack token). Why: only so you can pay faster next time; we never see or store your full card number, CVV or Mobile Money PIN. Basis: your consent, given when you choose to save a card.",
+          "Identity checks for shops and riders (Ghana Card number and photo, business or vehicle details). Why: to confirm who we approve to handle customers' clothes and visit their homes. Basis: our legitimate interest in keeping customers safe.",
+          "Payout details for shops and riders (Mobile Money or bank account). Why: only to pay their earnings. Basis: needed to provide the service.",
+          "Reviews and ratings. Why: to help customers choose shops and to keep the quality of shops and riders up. Basis: our legitimate interest in a trustworthy service.",
+          "Support messages. Why: to answer your question or complaint. Basis: needed to provide the service.",
+          "Device token for notifications. Why: only to send you updates about your orders, trips and account. Basis: needed to provide the service; you can turn notifications off in your phone's settings.",
         ]}
       />
-      <H>Why we use it</H>
-      <Ul
-        items={[
-          "To run orders: match you with a shop, send a rider, show the total and track each step.",
-          "To take payments and send refunds through Paystack, and to pay shops and riders.",
-          "To check shops and riders before they can take orders.",
-          "To send notifications about your orders, trips and account.",
-          "To prevent fraud, resolve disputes and answer support requests.",
-        ]}
-      />
-      <P>We do not sell your data and we do not show ads.</P>
+      <H>We only use your data for these reasons</H>
+      <P>
+        We use your data only for the reasons listed above. We will not use it for any other purpose unless we first tell
+        you and, where the law requires, ask for your consent. We do not sell your data, we do not use it for advertising,
+        and we do not show ads in Peg.
+      </P>
       <H>Who we share it with</H>
       <Ul
         items={[
@@ -379,10 +389,12 @@ export function PrivacyPage() {
         </Link>
         .
       </P>
-      <H>Your choices</H>
+      <H>Your rights</H>
       <P>
-        You can turn off location and notifications in your phone's settings; ordering still works if you place your
-        pin by hand. Email {CONTACT_EMAIL} to ask what we hold about you, to correct it or to delete it.
+        Under Ghana's Data Protection Act, 2012 (Act 843) you can ask us what data we hold about you and for a copy of it,
+        ask us to correct it, ask us to delete it, object to how we use it, and withdraw consent you have given (for
+        example, by turning off location or removing a saved card). Email {CONTACT_EMAIL} and we will reply within 30
+        days. You can also complain to Ghana's Data Protection Commission.
       </P>
       <H>Children</H>
       <P>Peg is for adults. We do not knowingly collect data from anyone under 18.</P>
