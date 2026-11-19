@@ -1,6 +1,6 @@
 import { useEffect, type ComponentType } from "react";
 import FleetPage from "./fleet/FleetPage";
-import { ContactPage, FaqPage, FeedbackPage, NotFoundPage, PrivacyPage, RefundsPage, TermsPage } from "./pages";
+import { ContactPage, DeleteAccountPage, FaqPage, FeedbackPage, NotFoundPage, PrivacyPage, RefundsPage, TermsPage } from "./pages";
 import AboutPage from "./site/AboutPage";
 import HomePage from "./site/HomePage";
 import HowItWorksPage from "./site/HowItWorksPage";
@@ -20,6 +20,7 @@ const ROUTES: Record<string, ComponentType> = {
   "/feedback": FeedbackPage,
   "/terms": TermsPage,
   "/privacy": PrivacyPage,
+  "/delete-account": DeleteAccountPage,
   "/refunds": RefundsPage,
 };
 
