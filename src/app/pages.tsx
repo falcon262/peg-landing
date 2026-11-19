@@ -225,63 +225,89 @@ export function FeedbackPage() {
 export function TermsPage() {
   usePageMeta(
     `${CUSTOMER_APP} terms of service`,
-    `${CUSTOMER_APP} marketplace terms. ${OPERATOR_NAME} is merchant of record. Pay after weigh through Paystack.`,
+    `Terms for ${CUSTOMER_APP}, ${PARTNER_APP} and Peg Rider, operated by ${OPERATOR_NAME}. Pay through Paystack after the shop reviews your clothes.`,
   );
 
   return (
-    <LegalArticle eyebrow="Terms" title="Terms of service" updated="Last updated 29 September 2026">
+    <LegalArticle eyebrow="Terms" title="Terms of service" updated="Last updated 19 November 2026">
       <P>
-        These terms cover {CUSTOMER_APP} and {PARTNER_APP}, operated by {OPERATOR_NAME} in Ghana. Using either app
-        means you agree to them. This is a working template, not a substitute for advice from a Ghanaian lawyer.
+        These terms cover {CUSTOMER_APP} (for customers), {PARTNER_APP} (for laundry shops) and Peg Rider (for riders),
+        operated by {OPERATOR_NAME} in Ghana. By using any of the apps you agree to them.
       </P>
       <H>1. The service</H>
       <P>
-        {CUSTOMER_APP} lets you book an independent laundry shop, arrange pickup, see the fee after the shop weighs the
-        load, and pay that fee through Paystack. {PARTNER_APP} is the shop side of the same marketplace.
+        {CUSTOMER_APP} lets you book an independent laundry shop near you, have a Peg rider collect and return your
+        clothes (or drop them off yourself), and pay through Paystack after the shop reviews your clothes and confirms the
+        total. {PARTNER_APP} is the app shops use to take and manage orders. Peg Rider is the app riders use to take
+        pickup and delivery trips.
       </P>
       <H>2. Who you contract with</H>
       <P>
-        {OPERATOR_NAME} operates the apps and is the merchant of record for customer checkout. Laundry work is
-        performed by the shop you book. Pickup and delivery are done by Peg riders, approved by Falcon Digital Solutions and
-        paid per trip. The delivery fee is set by road distance and goes to Falcon Digital Solutions, not to the shop.
+        {OPERATOR_NAME} operates the apps and is the merchant of record for customer payments. The laundry work is done
+        by the shop you book. Pickups and deliveries are done by Peg riders, who are approved by {OPERATOR_NAME} and paid
+        per trip. The delivery fee is set by road distance and is paid to {OPERATOR_NAME}, not to the shop.
       </P>
       <H>3. Accounts</H>
-      <P>
-        Customers sign in with a phone number and one-time code. Shops apply in {PARTNER_APP}, upload a Ghana Card, and
-        remain under review until Falcon staff approve or reject. A shop cannot accept {CUSTOMER_APP} orders until
-        approved.
-      </P>
-      <H>4. Fees and payment</H>
       <Ul
         items={[
-          "There is no customer charge until the shop confirms the weight.",
-          "You then pay the displayed fee in Peg through Paystack, with Mobile Money or card.",
-          "The shop does not collect that customer Paystack payment.",
-          "Peg does not keep customer or shop wallets and does not transfer value between users in the app.",
-          "Saved payment methods are labels only.",
-          "Shops are settled by Falcon separately from the customer Paystack charge.",
+          "You must be 18 or older to use Peg.",
+          "Customers sign in with a phone number and a one-time code. Keep your phone and codes to yourself; you are responsible for activity on your account.",
+          "Shops and riders apply in their app with a Ghana Card and stay under review until Peg approves or rejects them. They cannot take orders or trips until approved.",
+          "You can delete your account at any time in the app under Profile. See how to delete your Peg account on our website.",
         ]}
       />
-      <H>5. Cancellations</H>
-      <P>You may cancel in the app until the shop has started washing. After that, cancellation in the app is closed.</P>
-      <H>6. Refunds</H>
+      <H>4. Prices and payment</H>
+      <Ul
+        items={[
+          "The shop's prices and the delivery fee are shown before you book. The final laundry total is set when the shop reviews your clothes.",
+          "You are not charged until the shop confirms the total. You then pay in the app through Paystack, with Mobile Money or card.",
+          "If you choose to save a card, Paystack keeps it and Peg keeps only a token to charge it again. You can remove saved cards at any time.",
+          "Shops do not collect customer payments. Peg pays shops and riders their share separately.",
+          "Peg does not hold money for you in a wallet.",
+        ]}
+      />
+      <H>5. Pickup and hand-over</H>
       <P>
-        If we agree a refund is due, it is sent through Paystack to the original payment method. See the Refund Policy.
+        Give your rider the 4-digit code shown in the app only when your clothes are handed back to you. The code confirms
+        the delivery.
       </P>
-      <H>7. Acceptable use</H>
+      <H>6. Cancellations</H>
       <P>
-        Do not abuse the apps, submit false KYC, interfere with other users, or use Peg for anything other than
-        legitimate laundry bookings and related shop operations.
+        You can cancel in the app until the shop starts washing. If the shop already has your clothes when an order is
+        cancelled, you can collect them free or pay for a Peg rider to bring them back.
       </P>
-      <H>8. Liability</H>
+      <H>7. Refunds</H>
       <P>
-        Shops are responsible for the laundry work. Falcon is responsible for operating the apps and customer checkout.
-        Neither party is liable for indirect or consequential loss so far as Ghanaian law allows. Nothing here limits
-        liability that cannot legally be limited.
+        If a refund is due, it is sent through Paystack to the original Mobile Money wallet or card. See the{" "}
+        <Link href="/refunds" className="font-semibold underline">
+          refund policy
+        </Link>
+        .
       </P>
-      <H>9. Contact</H>
+      <H>8. Reviews</H>
       <P>
-        {CONTACT_EMAIL} · {CONTACT_PHONE} · {CONTACT_LOCATION}
+        Reviews must be honest and about your own order. Peg may remove reviews that are abusive, false or unrelated.
+      </P>
+      <H>9. Acceptable use</H>
+      <P>
+        Do not misuse the apps, give false identity details, harass shops, riders or customers, or use Peg for anything
+        other than real laundry orders and the work that goes with them. Peg may suspend accounts that break these terms.
+      </P>
+      <H>10. Liability</H>
+      <P>
+        Shops are responsible for the laundry work, and riders for the care of clothes while they carry them.{" "}
+        {OPERATOR_NAME} is responsible for running the apps and taking payments. As far as Ghanaian law allows, none of us
+        is liable for indirect or consequential loss. Nothing in these terms limits liability that cannot legally be
+        limited.
+      </P>
+      <H>11. Changes</H>
+      <P>
+        We may update these terms. The date of the latest change is shown at the top of this page. Using Peg after a
+        change means you accept the updated terms.
+      </P>
+      <H>12. Contact</H>
+      <P>
+        {OPERATOR_NAME} · {CONTACT_EMAIL} · {CONTACT_PHONE} · {CONTACT_LOCATION}
       </P>
     </LegalArticle>
   );
