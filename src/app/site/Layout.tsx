@@ -93,7 +93,7 @@ function Footer() {
       <div className={`${wrap} grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-12`}>
         <div className="flex flex-col gap-4 lg:col-span-4">
           <img src="/assets/client/2aa0f.svg" alt="Peg" className="h-9 w-[60px]" />
-          <p className="text-[24px] font-extrabold tracking-[-0.02em]">Laundry, sorted.</p>
+          <p className="text-[24px] font-extrabold tracking-[-0.02em]">Laundry? Sorted!</p>
           <p className="max-w-[34ch] text-[15px] leading-6 text-white/70">Laundry pickup for Accra. Coming soon to the App Store and Google Play.</p>
         </div>
         <div className={`${col} lg:col-span-2`}>

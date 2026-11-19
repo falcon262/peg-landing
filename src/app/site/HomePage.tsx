@@ -6,7 +6,7 @@ export const STEPS: [string, string][] = [
   ["Meet your rider", "A Peg rider collects your clothes. Follow your rider live on the map."],
   ["See the weight and fee", "The shop weighs your load at intake. You see both on your order."],
   ["Pay in the app", "Use Mobile Money or card through Paystack. Peg keeps no wallet."],
-  ["Get it back", "Give your rider the 4-digit code at hand-over. Laundry, sorted."],
+  ["Get it back", "Give your rider the 4-digit code at hand-over. Laundry? Sorted!"],
 ];
 
 const SERVICES: [string, string, string, string][] = [
@@ -31,7 +31,7 @@ export default function HomePage() {
     <>
       <Hero
         pill="Coming soon to Accra"
-        title="Laundry, sorted."
+        title="Laundry? Sorted!"
         lead="Book a nearby laundry shop. A Peg rider collects your clothes, the shop weighs them, and you pay in the app with MoMo or card."
         actions={
           <>
