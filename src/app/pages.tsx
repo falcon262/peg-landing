@@ -57,7 +57,7 @@ export function ContactPage() {
 export function FaqPage() {
   usePageMeta(
     `${CUSTOMER_APP} FAQ`,
-    "Pay after weigh, Paystack Mobile Money or card, no in-app wallets, Ghana Card shop KYC, and how refunds work.",
+    "Pay after the shop reviews your clothes, Paystack Mobile Money or card, no in-app wallets, Ghana Card shop KYC, and how refunds work.",
   );
 
   const groups: { title: string; items: { q: string; a: string }[] }[] = [
@@ -66,7 +66,7 @@ export function FaqPage() {
       items: [
         {
           q: "When do I pay?",
-          a: "After the shop confirms the weight. Peg then shows the fee. You pay that fee in the app through Paystack.",
+          a: "After the shop reviews your clothes and confirms the total. Peg then shows the fee. You pay that fee in the app through Paystack.",
         },
         {
           q: "Which methods can I use?",
@@ -74,7 +74,7 @@ export function FaqPage() {
         },
         {
           q: "Does the shop charge my card or MoMo themselves?",
-          a: "No. The shop does not collect the customer Paystack payment. Falcon Digital Solutions is the merchant of record. You pay in Peg after the weight is confirmed.",
+          a: "No. The shop does not collect the customer Paystack payment. Falcon Digital Solutions is the merchant of record. You pay in Peg after the shop confirms the total.",
         },
         {
           q: "Do you store wallets or move money between users in the app?",
@@ -82,7 +82,7 @@ export function FaqPage() {
         },
         {
           q: "Why is there no price until after pickup?",
-          a: "Laundry here is priced by weight. The shop has to weigh the load before anyone can quote a real fee.",
+          a: "The shop has to review your clothes before anyone can quote a real fee: items priced by weight are weighed, and per-item pieces are counted.",
         },
       ],
     },
@@ -441,13 +441,13 @@ export function DeleteAccountPage() {
 export function RefundsPage() {
   usePageMeta(
     `${CUSTOMER_APP} refund policy`,
-    "Refunds go through Paystack to the original Mobile Money or card. Pay only after the shop confirms weight.",
+    "Refunds go through Paystack to the original Mobile Money or card. Pay only after the shop reviews your clothes and confirms the total.",
   );
 
   return (
     <LegalArticle eyebrow="Refunds" title="Refund policy" updated="Last updated 29 September 2026">
       <P>
-        You are not charged until the shop confirms the weight and you complete Paystack checkout in {CUSTOMER_APP}.
+        You are not charged until the shop reviews your clothes, confirms the total and you complete Paystack checkout in {CUSTOMER_APP}.
         If we agree a refund is due after that, it is sent through Paystack to the original Mobile Money wallet or
         card.
       </P>
@@ -463,7 +463,7 @@ export function RefundsPage() {
       <Ul
         items={[
           "The shop has started washing and the work was done as booked.",
-          "You paid the fee that matched the confirmed weight and received the clothes.",
+          "You paid the total the shop confirmed and received the clothes.",
           "A Paystack attempt that never succeeded. In that case there is nothing to refund.",
         ]}
       />
