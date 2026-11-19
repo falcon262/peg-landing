@@ -25,14 +25,14 @@ const PROMISES: [string, string, string][] = [
 export default function HomePage() {
   usePageMeta(
     "Peg | Laundry pickup in Accra",
-    "Book a nearby laundry shop in Accra. A Peg rider collects your clothes, the shop weighs them, and you pay with Mobile Money or card. Operated by Falcon Solutions.",
+    "Book a nearby laundry shop in Accra. A Peg rider collects your clothes and you pay seamlessly after the shop reviews your clothes. Operated by Falcon Solutions.",
   );
   return (
     <>
       <Hero
         pill="Coming soon to Accra"
         title="Laundry? Sorted!"
-        lead="Book a nearby laundry shop. A Peg rider collects your clothes, the shop weighs them, and you pay in the app with MoMo or card."
+        lead="Book a nearby laundry shop. A Peg rider collects your clothes and you pay seamlessly after the shop reviews your clothes."
         actions={
           <>
             <Button href="#waitlist">Join the waitlist</Button>
