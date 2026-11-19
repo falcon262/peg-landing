@@ -12,7 +12,7 @@ const STEPS: { title: string; text: string; facts: [string, string][]; src: stri
   {
     title: "A Peg rider comes to you",
     text: "Your Peg rider collects your clothes and takes them to the shop. Follow them live on the map in the app.",
-    facts: [["Riders", "Approved by Falcon Solutions"], ["Delivery", "Priced by road distance"], ["Or", "Drop off at the shop yourself"]],
+    facts: [["Riders", "Approved by Falcon Digital Solutions"], ["Delivery", "Priced by road distance"], ["Or", "Drop off at the shop yourself"]],
     src: "/assets/app/orders.png",
     alt: "Your Peg orders: active pickups and recent history",
   },

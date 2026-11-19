@@ -3,13 +3,13 @@ import { usePageMeta } from "../../lib/routing";
 import { Button, Facts, H2, Hero, Section, SectionHead, Split, WaitlistBand } from "./ui";
 
 export default function AboutPage() {
-  usePageMeta("About Peg | Laundry pickup in Accra", "Peg is a laundry pickup app for Accra, operated by Falcon Solutions: one place for customers, neighbourhood laundry shops and Peg riders.");
+  usePageMeta("About Peg | Laundry pickup in Accra", "Peg is a laundry pickup app for Accra, operated by Falcon Digital Solutions: one place for customers, neighbourhood laundry shops and Peg riders.");
   return (
     <>
       <Hero
         pill="About Peg"
         title="A better way to bring laundry together."
-        lead="Peg is a laundry pickup app for Accra, operated by Falcon Solutions. One place for you, neighbourhood laundry shops and Peg riders."
+        lead="Peg is a laundry pickup app for Accra, operated by Falcon Digital Solutions. One place for you, neighbourhood laundry shops and Peg riders."
         actions={<Button href="#waitlist">Join the waitlist</Button>}
         note="App Store and Google Play: coming soon."
         visual={<img src="/assets/photos/folded.jpg" alt="Freshly folded shirts and trousers in a stack" className="aspect-[4/3] w-full max-w-[560px] rounded-3xl object-cover object-[50%_40%]" />}
@@ -35,7 +35,7 @@ export default function AboutPage() {
       <Section tone="white">
         <Split visual={<img src="/assets/photos/shop-folding.jpg" alt="A laundry shop owner folding a shirt" loading="lazy" className="aspect-[4/3] w-full rounded-3xl object-cover" />}>
           <H2>Who we are</H2>
-          <p className="text-[17px] leading-7 text-grey">Falcon Solutions builds and operates Peg and Peg Partner from Accra. We are the merchant of record for customer checkout. The shops on Peg are independent businesses, and we settle them separately from the Paystack charge you make in the app.</p>
+          <p className="text-[17px] leading-7 text-grey">Falcon Digital Solutions builds and operates Peg and Peg Partner from Accra. We are the merchant of record for customer checkout. The shops on Peg are independent businesses, and we settle them separately from the Paystack charge you make in the app.</p>
           <Facts
             items={[
               ["Wallets", "We hold no customer or shop wallets"],
