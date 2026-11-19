@@ -34,6 +34,7 @@ function Header({ path, cta }: { path: string; cta: Cta }) {
     </a>
   );
   return (
+    <>
     <header className="sticky top-0 z-50 border-b border-black/[0.06] bg-page/95 backdrop-blur">
       <div className={`${wrap} flex h-[76px] items-center gap-8`}>
         <Link href="/" className="flex shrink-0 items-center" onClick={() => setOpen(false)}>
@@ -66,8 +67,10 @@ function Header({ path, cta }: { path: string; cta: Cta }) {
           </span>
         </button>
       </div>
+    </header>
+      {/* Outside the header: its backdrop blur would otherwise trap this fixed panel inside the 76px bar. */}
       {open ? (
-        <nav id="menu" aria-label="Main" className="fixed inset-x-0 bottom-0 top-[76px] overflow-auto bg-page px-5 pb-10 pt-4 md:px-10 lg:hidden">
+        <nav id="menu" aria-label="Main" className="fixed inset-x-0 bottom-0 top-[76px] z-40 overflow-y-auto overscroll-contain bg-page px-5 pb-10 pt-4 md:px-10 lg:hidden">
           <Link href="/" className="block border-b border-rule py-4 text-[24px] font-extrabold" onClick={() => setOpen(false)}>
             Home
           </Link>
@@ -81,7 +84,7 @@ function Header({ path, cta }: { path: string; cta: Cta }) {
           </div>
         </nav>
       ) : null}
-    </header>
+    </>
   );
 }
 
