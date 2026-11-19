@@ -290,57 +290,123 @@ export function TermsPage() {
 export function PrivacyPage() {
   usePageMeta(
     `${CUSTOMER_APP} privacy policy`,
-    `How ${OPERATOR_NAME} handles Peg account, order, Ghana Card KYC, and Paystack payment data.`,
+    `How ${OPERATOR_NAME} collects, uses and shares data in Peg, Peg Partner and Peg Rider.`,
   );
 
   return (
-    <LegalArticle eyebrow="Privacy" title="Privacy policy" updated="Last updated 29 September 2026">
+    <LegalArticle eyebrow="Privacy" title="Privacy policy" updated="Last updated 19 November 2026">
       <P>
-        {OPERATOR_NAME} operates {CUSTOMER_APP} and {PARTNER_APP}. This policy describes what we collect, why, and who
-        we share it with. It is a working template, not a signed legal opinion.
+        {OPERATOR_NAME} operates {CUSTOMER_APP} (for customers), {PARTNER_APP} (for laundry shops) and Peg Rider (for
+        riders), and this website. This policy explains what we collect in those apps, why, who we share it with and how
+        you can delete it.
       </P>
       <H>What we collect</H>
       <Ul
         items={[
-          "Phone number and one-time codes used to sign in.",
-          "Order details: shop, pickup notes, weight once the shop confirms it, fee, and status.",
-          "Support messages you send us.",
-          "For shops: application details and Ghana Card images used for KYC review.",
-          "Payment references returned by Paystack. We do not store full card numbers or MoMo PINs in Peg.",
+          "Account details: your name, phone number, email address and, if you add one, a profile photo. One-time codes sent to your phone are used to sign you in.",
+          "Addresses and location: the pickup and delivery addresses you save, with their map pin. Peg can use your phone's location to place the pin if you allow it.",
+          "Rider location: Peg Rider shares the rider's precise location while they are online or on a trip, so customers can follow their delivery and nearby trips can be offered. It stops when the rider goes offline.",
+          "Orders: the shop, services, pickup notes, weight and total the shop confirms, status updates and the hand-over code.",
+          "Payments: payment references and status from Paystack. If you choose to save a card, we keep the card brand, last four digits, expiry date and a Paystack token that lets Paystack charge it again. We never see or store your full card number, CVV or Mobile Money PIN.",
+          "For shops and riders: business or vehicle details, a Ghana Card number and photo for identity checks, and payout details (Mobile Money or bank account).",
+          "Reviews and ratings you leave for shops and riders, and messages you send to Peg support.",
+          "A device token so we can send you notifications about your orders and trips.",
         ]}
       />
-      <H>Why we collect it</H>
-      <P>
-        To run bookings, show the fee after weigh, take Paystack checkout, review shop applications, settle shops,
-        handle refunds, and respond to support.
-      </P>
+      <H>Why we use it</H>
+      <Ul
+        items={[
+          "To run orders: match you with a shop, send a rider, show the total and track each step.",
+          "To take payments and send refunds through Paystack, and to pay shops and riders.",
+          "To check shops and riders before they can take orders.",
+          "To send notifications about your orders, trips and account.",
+          "To prevent fraud, resolve disputes and answer support requests.",
+        ]}
+      />
+      <P>We do not sell your data and we do not show ads.</P>
       <H>Who we share it with</H>
       <Ul
         items={[
-          "Paystack, to process Mobile Money and card payments and refunds.",
-          "The shop you booked, so they can wash the load. They do not receive your card or MoMo secrets.",
-          "The Peg rider on your order, who sees your pickup address and the order details to collect and return your clothes.",
-          "Falcon staff who approve or reject shop KYC.",
+          "The shop you book: your name, phone number, order details and, for pickups, your address.",
+          "The rider on your order: your name, phone number and pickup or delivery address. Customers see their rider's name, vehicle and live location during the trip.",
+          "Paystack, to process Mobile Money and card payments, refunds and saved cards.",
+          "Service providers who run Peg for us: Microsoft Azure (hosting), Google Maps (maps and address search) and Firebase Cloud Messaging (notifications).",
+          "Authorities, where Ghanaian law requires it.",
         ]}
       />
-      <H>Wallets</H>
+      <H>Security</H>
       <P>
-        Peg does not keep a stored-value wallet for customers or shops. Saved methods in the app are labels. Payment
-        credentials stay with Paystack.
+        Data is sent over encrypted connections (HTTPS). Ghana Card photos and saved card tokens are only available to
+        Peg staff who need them; card tokens never leave our servers except to Paystack.
       </P>
-      <H>Retention</H>
+      <H>How long we keep it</H>
       <P>
-        We keep order and KYC records as long as needed to operate the service, handle disputes, and meet Ghanaian
-        record-keeping duties, then delete or anonymise them.
+        We keep your data while your account is open. When you delete your account, we remove your name, phone number,
+        email, profile photo, saved cards, Ghana Card photo and device tokens. We keep order and payment records, including
+        the addresses used for them but without your name or contact details, for as long as Ghanaian tax and accounting rules require.
       </P>
-      <H>Your requests</H>
+      <H>Deleting your account</H>
       <P>
-        Email {CONTACT_EMAIL} to ask what we hold, to correct it, or to request deletion where we are not required to
-        keep it.
+        In any Peg app, go to Profile and choose Delete account. You can also ask us by email; see{" "}
+        <Link href="/delete-account" className="font-semibold underline">
+          how to delete your Peg account
+        </Link>
+        .
       </P>
+      <H>Your choices</H>
+      <P>
+        You can turn off location and notifications in your phone's settings; ordering still works if you place your
+        pin by hand. Email {CONTACT_EMAIL} to ask what we hold about you, to correct it or to delete it.
+      </P>
+      <H>Children</H>
+      <P>Peg is for adults. We do not knowingly collect data from anyone under 18.</P>
       <H>Contact</H>
       <P>
-        {CONTACT_EMAIL} · {CONTACT_PHONE} · {CONTACT_LOCATION}
+        {OPERATOR_NAME} · {CONTACT_EMAIL} · {CONTACT_PHONE} · {CONTACT_LOCATION}
+      </P>
+    </LegalArticle>
+  );
+}
+
+export function DeleteAccountPage() {
+  usePageMeta(
+    "Delete your Peg account",
+    "How to delete your Peg, Peg Partner or Peg Rider account and what happens to your data.",
+  );
+
+  return (
+    <LegalArticle eyebrow="Your account" title="Delete your Peg account" updated="Last updated 19 November 2026">
+      <P>
+        This page is for {CUSTOMER_APP}, {PARTNER_APP} and Peg Rider, operated by {OPERATOR_NAME}.
+      </P>
+      <H>In the app</H>
+      <Ul
+        items={[
+          "Open the Peg app you use and sign in.",
+          "Go to Profile, then choose Delete account.",
+          "Confirm. Your account is deleted straight away and you are signed out.",
+        ]}
+      />
+      <P>
+        If you have an order or trip in progress, or a shop payout waiting, finish it first; the app will tell you.
+      </P>
+      <H>By email</H>
+      <P>
+        If you can't use the app, email {CONTACT_EMAIL} from the email address on your account, or include the phone
+        number you sign in with, and ask us to delete your account. We will confirm within 7 days.
+      </P>
+      <H>What is deleted</H>
+      <Ul
+        items={[
+          "Your name, phone number, email address and profile photo.",
+          "Saved cards, including the Paystack tokens for them.",
+          "Ghana Card photos for shops and riders, and notification device tokens.",
+        ]}
+      />
+      <H>What we keep</H>
+      <P>
+        Order and payment records, including the addresses used for them but without your name or contact details, for as long as Ghanaian tax and accounting rules
+        require. Reviews you wrote stay on the shop's page without your name.
       </P>
     </LegalArticle>
   );
