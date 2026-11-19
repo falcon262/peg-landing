@@ -78,7 +78,7 @@ export function FaqPage() {
         },
         {
           q: "Do you store wallets or move money between users in the app?",
-          a: "No. Peg does not keep a customer or shop wallet, and it does not transfer value between users in the app. Saved methods you see are labels only. The card or MoMo stays with Paystack.",
+          a: "No. Peg does not keep a customer or shop wallet, and it does not transfer value between users in the app. If you save a card, Paystack keeps it; Peg only keeps a token to charge it again, never your card number or MoMo PIN.",
         },
         {
           q: "Why is there no price until after pickup?",
