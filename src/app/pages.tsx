@@ -229,7 +229,7 @@ export function TermsPage() {
   );
 
   return (
-    <LegalArticle eyebrow="Terms" title="Terms of service" updated="Last updated 19 November 2026">
+    <LegalArticle eyebrow="Terms" title="Terms of service" updated="Last updated 20 November 2026">
       <P>
         These terms cover {CUSTOMER_APP} (for customers), {PARTNER_APP} (for laundry shops) and Peg Rider (for riders),
         operated by {OPERATOR_NAME} in Ghana. By using any of the apps you agree to them.
@@ -300,7 +300,8 @@ export function TermsPage() {
       <H>10. Acceptable use</H>
       <P>
         Do not misuse the apps, give false identity details, harass shops, riders or customers, or use Peg for anything
-        other than real laundry orders and the work that goes with them. Peg may suspend accounts that break these terms.
+        other than real laundry orders and the work that goes with them. Shop photos must show your own shop, and rider
+        photos must show your own face; Peg may remove any photo that doesn't. Peg may suspend accounts that break these terms.
       </P>
       <H>11. Liability</H>
       <P>
@@ -329,7 +330,7 @@ export function PrivacyPage() {
   );
 
   return (
-    <LegalArticle eyebrow="Privacy" title="Privacy policy" updated="Last updated 19 November 2026">
+    <LegalArticle eyebrow="Privacy" title="Privacy policy" updated="Last updated 20 November 2026">
       <P>
         {OPERATOR_NAME} operates {CUSTOMER_APP} (for customers), {PARTNER_APP} (for laundry shops) and Peg Rider (for
         riders), and this website. This policy explains what we collect in those apps, why, who we share it with and how
@@ -348,6 +349,8 @@ export function PrivacyPage() {
           "Payment records (Paystack references and status). Why: to confirm you paid, send refunds and pay shops and riders. Basis: needed to provide the service, and to meet Ghanaian tax and accounting rules.",
           "Saved cards (optional: card brand, last four digits, expiry and a Paystack token). Why: only so you can pay faster next time; we never see or store your full card number, CVV or Mobile Money PIN. Basis: your consent, given when you choose to save a card.",
           "Identity checks for shops and riders (Ghana Card number and photo, business or vehicle details). Why: to confirm who we approve to handle customers' clothes and visit their homes. Basis: our legitimate interest in keeping customers safe.",
+          "Shop photo (Peg Partner, optional). Why: shown to customers on the shop's listing so they can see where their clothes go. Basis: the shop's consent; it can remove the photo at any time.",
+          "Rider photo (Peg Rider). Why: shown to the customer and the shop on that rider's trips, so they know who is collecting or delivering their clothes. Peg also compares it with the Ghana Card before approval. Basis: our legitimate interest in keeping customers safe.",
           "Payout details for shops and riders (Mobile Money or bank account). Why: only to pay their earnings. Basis: needed to provide the service.",
           "Reviews and ratings. Why: to help customers choose shops and to keep the quality of shops and riders up. Basis: our legitimate interest in a trustworthy service.",
           "Support messages. Why: to answer your question or complaint. Basis: needed to provide the service.",
@@ -364,7 +367,8 @@ export function PrivacyPage() {
       <Ul
         items={[
           "The shop you book: your name, phone number, order details and, for pickups, your address.",
-          "The rider on your order: your name, phone number and pickup or delivery address. Customers see their rider's name, vehicle and live location during the trip.",
+          "The rider on your order: your name, phone number and pickup or delivery address. Customers and shops see their rider's name, photo, vehicle and live location during the trip.",
+          "Customers: a shop's name, photo, address, prices, opening hours and reviews are shown on its listing.",
           "Paystack, to process Mobile Money and card payments, refunds and saved cards.",
           "Service providers who run Peg for us: Microsoft Azure (hosting), Google Maps (maps and address search) and Firebase Cloud Messaging (notifications).",
           "Authorities, where Ghanaian law requires it.",
@@ -373,12 +377,13 @@ export function PrivacyPage() {
       <H>Security</H>
       <P>
         Data is sent over encrypted connections (HTTPS). Ghana Card photos and saved card tokens are only available to
-        Peg staff who need them; card tokens never leave our servers except to Paystack.
+        Peg staff who need them; card tokens never leave our servers except to Paystack. A rider's photo is only sent to
+        the people on that rider's trips, through a link that can't be guessed.
       </P>
       <H>How long we keep it</H>
       <P>
         We keep your data while your account is open. When you delete your account, we remove your name, phone number,
-        email, profile photo, saved cards, Ghana Card photo and device tokens. We keep order and payment records, including
+        email, profile photo, saved cards, Ghana Card photo, shop or rider photo and device tokens. We keep order and payment records, including
         the addresses used for them but without your name or contact details, for as long as Ghanaian tax and accounting rules require.
       </P>
       <H>Deleting your account</H>
@@ -413,7 +418,7 @@ export function DeleteAccountPage() {
   );
 
   return (
-    <LegalArticle eyebrow="Your account" title="Delete your Peg account" updated="Last updated 19 November 2026">
+    <LegalArticle eyebrow="Your account" title="Delete your Peg account" updated="Last updated 20 November 2026">
       <P>
         This page is for {CUSTOMER_APP}, {PARTNER_APP} and Peg Rider, operated by {OPERATOR_NAME}.
       </P>
@@ -438,7 +443,7 @@ export function DeleteAccountPage() {
         items={[
           "Your name, phone number, email address and profile photo.",
           "Saved cards, including the Paystack tokens for them.",
-          "Ghana Card photos for shops and riders, and notification device tokens.",
+          "Ghana Card photos, shop photos and rider photos, and notification device tokens.",
         ]}
       />
       <H>What we keep</H>
