@@ -392,6 +392,10 @@ export function PrivacyPage() {
         <Link href="/delete-account" className="font-semibold underline">
           how to delete your Peg account
         </Link>
+        . To delete only some of your data, see{" "}
+        <Link href="/delete-data" className="font-semibold underline">
+          how to delete some of your data
+        </Link>
         .
       </P>
       <H>Your rights</H>
@@ -438,6 +442,13 @@ export function DeleteAccountPage() {
         If you can't use the app, email {CONTACT_EMAIL} from the email address on your account, or include the phone
         number you sign in with, and ask us to delete your account. We will confirm within 7 days.
       </P>
+      <P>
+        Want to keep your account and delete only some data, like a saved address or card?{" "}
+        <Link href="/delete-data" className="font-semibold underline">
+          Delete some of your data
+        </Link>
+        .
+      </P>
       <H>What is deleted</H>
       <Ul
         items={[
@@ -451,6 +462,52 @@ export function DeleteAccountPage() {
         Order and payment records, including the addresses used for them but without your name or contact details, for as long as Ghanaian tax and accounting rules
         require. Reviews you wrote stay on the shop's page without your name.
       </P>
+    </LegalArticle>
+  );
+}
+
+export function DeleteDataPage() {
+  usePageMeta(
+    "Delete some of your Peg data",
+    "How to delete saved addresses, saved cards, a shop photo or other data from Peg, Peg Partner or Peg Rider without deleting your account.",
+  );
+
+  return (
+    <LegalArticle eyebrow="Your data" title="Delete some of your data" updated="Last updated 20 November 2026">
+      <P>
+        This page is for {CUSTOMER_APP}, {PARTNER_APP} and Peg Rider, operated by {OPERATOR_NAME}. You can delete some
+        of your data and keep your account. To close your account and delete everything we can, see{" "}
+        <Link href="/delete-account" className="font-semibold underline">
+          how to delete your Peg account
+        </Link>
+        .
+      </P>
+      <H>In {CUSTOMER_APP}</H>
+      <Ul
+        items={[
+          "Saved addresses: go to Profile, then Addresses, and delete the address. It is removed from Peg straight away.",
+          "Saved cards: go to Profile, then Saved cards, and delete the card. The card and the Paystack token for it are removed straight away.",
+        ]}
+      />
+      <H>In {PARTNER_APP}</H>
+      <Ul
+        items={[
+          "Shop photo: go to Profile, then Business information, and choose Remove under the shop photo. It is removed straight away and customers see the Peg logo instead.",
+        ]}
+      />
+      <H>By email, for anything else</H>
+      <P>
+        Email {CONTACT_EMAIL} from the email address on your account, or include the phone number you sign in with, and
+        say which data you want deleted. We will reply within 30 days and tell you what we deleted, or why we have to keep
+        something (see below).
+      </P>
+      <H>What we keep</H>
+      <Ul
+        items={[
+          "Order and payment records, including the address used for each order, for as long as Ghanaian tax and accounting rules require. Deleting a saved address doesn't change past orders.",
+          "While your account is open, the details we need to run it: your name and phone number, and for shops and riders their Ghana Card details, rider photo and payout account. To remove those, delete your account.",
+        ]}
+      />
     </LegalArticle>
   );
 }
